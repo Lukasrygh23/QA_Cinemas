@@ -1,5 +1,11 @@
+import CarouselGallery from './components/CarouselGallery';
+
 function App() {
-  return <div></div>;
+  return (
+    <div>
+      <CarouselGallery />
+    </div>
+  );
 }
 
 export default App;
