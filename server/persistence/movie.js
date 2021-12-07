@@ -21,6 +21,12 @@ const movieSchema = new Schema({
   synopsis: String,
   imageURL: String,
   newRelease: Boolean,
+  screenings: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Screening",
+    },
+  ],
 });
 
 const Movie = model("Movie", movieSchema);
