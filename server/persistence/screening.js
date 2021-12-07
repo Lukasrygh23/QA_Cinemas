@@ -10,7 +10,8 @@ const screeningSchema = new Schema({
   screenType: { enum: ["Regular", "Deluxe"] },
   date: Date,
   time: String,
-  movie: String,
+  movie: { type: String, required: true },
+  movieId: Number,
   bookings: [{ type: Schema.Types.ObjectId, ref:"Booking"}]
 });
 
