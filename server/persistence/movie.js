@@ -17,7 +17,8 @@ const movieSchema = new Schema({
     max: 100,
   },
   releaseDate: { type: Date },
-  director: String, //This is just a list of actors, you can change it later if you need it.
+  director: String,
+  cast: [{ type: String }], //This is just a list of actors, you can change it later if you need it.
   synopsis: String,
   imageURL: String,
   newRelease: Boolean,
