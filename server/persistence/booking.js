@@ -1,4 +1,4 @@
-//screening
+//booking
 //importing mongoose
 const mongoose = require("mongoose");
 //Create Schema and Model
