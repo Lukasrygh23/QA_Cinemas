@@ -4,12 +4,13 @@ const { Screening } = require("../persistence/screening.js");
 const { Movie } = require("../persistence/movie.js");
 const error = require;
 
-router.put("/create", (req, res, next) => {
+/*router.put("/create", (req, res, next) => {
   const screening = new Screening(req.body);
   console.log(req.body);
   console.log("======")
   console.log(screening);
-  /*screening
+  console.log("THIS DOESN'T WORK DON'T USE IT");
+  screening
     .save()
     .then((result) => {
       res.status(201).send(`${result} saved to database!`);
@@ -20,7 +21,7 @@ router.put("/create", (req, res, next) => {
     });*/
   
   //This sucks
-  
+  /*
   let film = Movie.findOne({ _id: req.body.movieId });
   const listScreenings = film;
   console.log("======");
@@ -32,9 +33,9 @@ router.put("/create", (req, res, next) => {
     })
     .catch((error) => {
       next(error);
-    });
+    }); 
+});*/
 
-});
 
 
 
