@@ -1,7 +1,7 @@
 const openingTimes = () => {
     return (
         <>
-            <h1>Opening Times</h1>
+            <h2>Opening Times</h2>
             <table class="table table-dark table-striped table-hover">
                 <thead>
                     <tr>
@@ -51,11 +51,23 @@ const openingTimes = () => {
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Christmas Eve</td>
-                        <td></td>
+                        <td>Fri 24th Dec, Christmas Eve</td>
+                        <td>9am to 6pm</td>
                     </tr>
                     <tr>
-                        <td>Christmas Day</td>
+                        <td>Sat 25th Dec, Christmas Day</td>
+                        <td>Closed</td>
+                    </tr>
+                    <tr>
+                        <td>Sun 26th Dec, Boxing Day</td>
+                        <td>12pm to 6pm</td>
+                    </tr>
+                    <tr>
+                        <td>Fri 31st Dec, New Year's Eve</td>
+                        <td>10am to 6pm</td>
+                    </tr>
+                    <tr>
+                        <td>Sat 1st Jan, New Year's Day</td>
                         <td>Closed</td>
                     </tr>
                 </tbody>

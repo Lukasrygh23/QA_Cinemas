@@ -1,0 +1,10 @@
+table, th, td {
+    text-align: center;
+    border: 1px solid white;
+    table-layout: fixed;
+}
+
+td {
+    width: 0.1%;
+    white-space: nowrap;
+}
