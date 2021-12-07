@@ -1,10 +1,10 @@
+import CarouselGallery from './components/CarouselGallery';
 import NavBar from './components/navbar';
 import Home from './homePage';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
-    <div>
       <Router>
         <NavBar />
         <Switch>
@@ -12,8 +12,8 @@ function App() {
             <Home />
           </Route>
         </Switch>
-      </Router>
-    </div>);
+    </Router>
+  );
 }
 
 export default App;
