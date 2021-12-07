@@ -1,3 +1,5 @@
+
+
 import CarouselGallery from './components/CarouselGallery';
 import NavBar from './components/navbar';
 import Home from './homePage';
@@ -18,6 +20,7 @@ function App() {
         </Switch>
     </Router>
   );
+
 }
 
 export default App;
