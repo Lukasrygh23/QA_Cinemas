@@ -11,7 +11,7 @@ const bookingSchema = new Schema({
   consessions: String, //Considered changing to array.
   screening: String,
   seats: [
-    { Type: Schema.Types.ObjectId, ref: "Seat", }]
+    { type: Schema.Types.ObjectId, ref: "Seat", }]
 });
 
 const Booking = model("Booking", bookingSchema);
