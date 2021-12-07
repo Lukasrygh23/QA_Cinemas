@@ -13,4 +13,4 @@ const bookingSchema = new Schema({
 
 const Booking = model("Booking", bookingSchema);
 
-module.exports = { Bookinb: Booking };
+module.exports = { Booking: Booking };
