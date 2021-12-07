@@ -4,7 +4,7 @@ const { Screening } = require("../persistence/screening.js");
 const error = require;
 
 router.post("/create", (req, res, next) => {
-  const screening = new screening(req.body);
+  const screening = new Screening(req.body);
   console.log(req.body);
   console.log(screening);
 
@@ -19,11 +19,11 @@ router.post("/create", (req, res, next) => {
 });
 
 router.get("/getAll", (req, res) => {
-  Screening.find((error, movieList) => {
+  Screening.find((error, screeningList) => {
     if (error) {
       console.log(`Error: (: ${error})`);
     }
-    res.status(200).send(movieList);
+    res.status(200).send(screeningList);
   });
 });
 
