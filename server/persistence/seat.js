@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const { Schema, model } = mongoose;
 
 const seatSchema = new Schema({
-  id: number,
+  id: Number,
   seatNumber: String,
   adult: Boolean,
   booking:String

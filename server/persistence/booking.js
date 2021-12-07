@@ -5,12 +5,13 @@ const mongoose = require("mongoose");
 const { Schema, model } = mongoose;
 
 const bookingSchema = new Schema({
-  id: number,
-  numberOfSeats: number,
+  id: Number,
+  numberOfSeats: Number,
   //ChildSchema here
   consessions: String, //Considered changing to array.
   screening: String,
-  Seats: [{Type: Schema.Types.ObjectId, ref:"Seat"}]
+  seats: [
+    { Type: Schema.Types.ObjectId, ref: "Seat", }]
 });
 
 const Booking = model("Booking", bookingSchema);
