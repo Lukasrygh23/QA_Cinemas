@@ -4,13 +4,13 @@ const mongoose = require("mongoose");
 //Create Schema and Model
 const { Schema, model } = mongoose;
 
-const reviewSchema = new Schema({
+const threadSchema = new Schema({
   id: number,
   userName: String,
   rating: { type: Number, min: 0, max: 10 },
   reviewBody: String,
 });
 
-const Review = model("Review", reviewSchema);
+const Thread = model("Thread", threadSchema);
 
-module.exports = { Review: Review };
+module.exports = { Thread: Thread };
