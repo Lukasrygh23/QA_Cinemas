@@ -11,7 +11,7 @@ const threadSchema = new Schema({
   userName: String,
   rating: { type: Number, min: 0, max: 10 },
   reviewBody: String,
-  comments: [{type: Schema.Types.commentId, ref:'Comment'}],
+  comments: [{type: Schema.Types.ObjectId, ref:'Comment'}],
  
 });
 

@@ -15,9 +15,13 @@ movieTitle: String,
   director: String, //This is just a list of actors, you can change it later if you need it.
   synopsis: String,
   imageURL: String,
-  newRelease: Boolean
+  newRelease: Boolean,
+  screenings: [{
+    type: Schema.Types.ObjectId, ref: "Screening"
+  }]
 });
 
 const Movie = model("Movie", movieSchema);
 
 module.exports = { Movie: Movie };
+

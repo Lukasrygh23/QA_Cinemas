@@ -8,6 +8,7 @@ const seatSchema = new Schema({
   id: number,
   seatNumber: String,
   adult: Boolean,
+  booking:String
 });
 
 const Seat = model("Seat", seatSchema);
