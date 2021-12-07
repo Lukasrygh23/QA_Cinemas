@@ -6,9 +6,9 @@ const { Schema, model } = mongoose;
 
 const bookingSchema = new Schema({
   id: number,
-  seatNumber: number,
+  numberOfSeats: number,
   //ChildSchema here
-  consessions: String //Considered changing to array.
+  consessions: String, //Considered changing to array.
 });
 
 const Booking = model("Booking", bookingSchema);
