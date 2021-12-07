@@ -1,9 +1,11 @@
-import Carousel from './components/carousel';
+import Navbar from './components/navbar';
+import CarouselGallery from './components/CarouselGallery';
 
 const homePage = () => {
     return (
         <div>
-            <Carousel />
+            <Navbar/>
+            <CarouselGallery />
         </div>
     );
 }
