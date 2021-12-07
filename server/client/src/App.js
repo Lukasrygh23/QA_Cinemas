@@ -1,15 +1,22 @@
-import React from "react";
-// import Footer from "./components/Footer";
-import UpcomingCardList from "./components/UpcomingCardList";
+
+
+import CarouselGallery from './components/CarouselGallery';
+import NavBar from './components/navbar';
+import Home from './homePage';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 function App() {
   return (
-    
-      <div>
-        <UpcomingCardList/>
-      </div>
-    
-  )
+      <Router>
+        <NavBar />
+        <Switch>
+          <Route path="/" exact>
+            <Home />
+          </Route>
+        </Switch>
+    </Router>
+  );
+
 }
 
 export default App;
