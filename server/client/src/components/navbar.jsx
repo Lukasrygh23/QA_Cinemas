@@ -30,7 +30,7 @@ const navbar = () => {
                                 Upcoming Releases
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li class="nav-item"><Link to="/NewReleases">View All</Link></li>
+                                <li class="nav-item"><Link class="dropdown-item" to="/NewReleases">View All</Link></li>
                                 <li><a class="dropdown-item" href="#">Another action</a></li>
                             </ul>
                         </li>
