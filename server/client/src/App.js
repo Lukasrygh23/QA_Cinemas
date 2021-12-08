@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-=======
-import CarouselGallery from './components/CarouselGallery';
->>>>>>> homepage
 import NavBar from './components/navbar';
 import HomePage from './homePage';
 import NoTimeToDiePage from './NoTimeToDiePage';
@@ -15,9 +11,6 @@ function App() {
       <NavBar />
       <Switch>
         <Route path="/" exact>
-<<<<<<< HEAD
-          <Home />
-=======
           <HomePage />
         </Route>
         <Route path="/movie/no_time_to_die">
@@ -25,7 +18,6 @@ function App() {
         </Route>
         <Route path="/booking/no_time_to_die">
           <BookingNoTimeToDiePage />
->>>>>>> homepage
         </Route>
         <Route path="/OpeningTimes">
           <OpeningTimes />
