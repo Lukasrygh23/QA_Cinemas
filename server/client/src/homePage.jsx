@@ -1,13 +1,14 @@
-import CarouselGallery from './components/CarouselGallery';
-import UpcomingCardList from './components/UpcomingCardList';
+import CarouselGallery from './components/CarouselGallery'
+import CardListUpcomingMovies from './components/CardListUpcomingMovies';
 import Footer from './components/Footer';
 
 const homePage = () => {
     return (
         <div>
             <CarouselGallery />
-            <UpcomingCardList />
-            <Footer />
+            <CardListUpcomingMovies />
+            <Footer/>
+
         </div>
     );
 }
