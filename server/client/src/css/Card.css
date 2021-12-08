@@ -62,7 +62,39 @@
 
 }
 
-a {
+.btnText {
     text-decoration: none;
     color: #040303;
+    -webkit-transition: color 1s;
+    -moz-transition: color 1s;
+    -ms-transition: color 1s;
+    -o-transition: color 1s;
+    transition: color 1s;
+}
+
+.btnText:hover {
+    color: white;
+}
+
+.movImg {
+    width: 300px;
+    height: 300px;
+
+}
+
+.upcomingTitle {
+    color: #ff9a5a;
+    -webkit-transition: color 1s;
+    -moz-transition: color 1s;
+    -ms-transition: color 1s;
+    -o-transition: color 1s;
+    transition: color 1s;
+}
+
+.upcomingTitle:hover {
+    color: #cc5b15;
+}
+
+.hrTag {
+    color: white;
 }

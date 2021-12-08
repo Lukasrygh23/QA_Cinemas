@@ -52,7 +52,7 @@ const CardListUpcomingMovies = () => {
         return (
             //<> -> a fragment, can use <div> instead
             <>
-                
+                <h1 class="upcomingTitle ms-5" >Upcoming Movies</h1>
                             {
                                 //to display the data on the page, we need to map over it
                                 data.map((mov) => (
