@@ -21,8 +21,9 @@ const CardListUpcomingMovies = () => {
                 //.then -> once the data is received, do something
                 .then((response) => {
                     setIsLoaded(true);
+                    console.log(response);
                     //use the setData to update the empty array
-                    setData(response.data.data);
+                    setData(response.data);
                     //the do something is to log the response to the console
                     // console.log(response.data.data);
                     //in case things don't go according to plan, need too catch the error and deal with it
@@ -32,9 +33,10 @@ const CardListUpcomingMovies = () => {
                     // console.error(error);
                 });
 
+    
         }, 5000)
     }, [])//square brackets means run it once
-
+ 
     if (error) {
         return <h1>Oops, something went wrong {error.message}</h1>
     } else if (!isLoaded) {
@@ -46,6 +48,7 @@ const CardListUpcomingMovies = () => {
         )
 
     } else {
+        console.log(data)
         return (
             //<> -> a fragment, can use <div> instead
             <>
