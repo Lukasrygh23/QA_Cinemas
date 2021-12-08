@@ -8,7 +8,7 @@ const { Schema, model } = mongoose;
 const commentSchema = new Schema({
   username: String,
   text: String,
-  thread_id: thread.thread_id,
+  thread_id: 
   //This is a very imaginiative Schema
 });
 
