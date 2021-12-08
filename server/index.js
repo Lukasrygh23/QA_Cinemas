@@ -34,10 +34,12 @@ app.use("/bookingRoutes", booking);
 app.use(errorLogger);
 
 //simple usage tutorial followed, hopefully should work
-app.get("/movieRoutes/getAll", cors(), function (req, res, next) {
+app.get("/movieRoutes/getAll", cors(), function (req, res) {
   res.json({ msg: "This is CORS-enabled for all origins!" });
 });
 
 // PORT
 PORT = 5000 || process.env.PORT;
-app.listen(PORT, console.log(`listening on port: ${PORT}`));
+app.listen(PORT, function () {
+  console.log(`listening on port: ${PORT}`);
+});
