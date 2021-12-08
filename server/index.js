@@ -2,12 +2,16 @@ require("dotenv").config();
 
 const express = require("express");
 const mongoose = require("mongoose");
+const cors = require("cors");
 const movie = require("./routes/moviesRoutes.js");
+
 const booking = require("./routes/bookingRoutes.js");
 
 const app = express();
 
 app.use(express.json());
+//cors installed and app.use added for cors
+app.use(cors());
 
 const errorLogger = (err, req, res, next) => {
   console.log(err.stack);
@@ -44,6 +48,11 @@ mongoose.connect(DatabaseUrl, { useNewUrlParser: true }, (error) => {
 app.use("/movieRoutes", movie);
 app.use("/bookingRoutes", booking);
 app.use(errorLogger);
+
+//simple usage tutorial followed, hopefully should work
+app.get("/movieRoutes/getAll", cors(), function (req, res, next) {
+  res.json({ msg: "This is CORS-enabled for all origins!" });
+});
 
 // PORT
 PORT = 5000 || process.env.PORT;
