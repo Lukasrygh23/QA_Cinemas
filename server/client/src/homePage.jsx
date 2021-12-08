@@ -1,4 +1,4 @@
-import CarouselGallery from './components/CarouselGallery';
+import CarouselGallery from './components/CarouselGallery'
 import CardListUpcomingMovies from './components/CardListUpcomingMovies';
 import Footer from './components/Footer';
 
@@ -8,6 +8,7 @@ const homePage = () => {
             <CarouselGallery />
             <CardListUpcomingMovies />
             <Footer/>
+
         </div>
     );
 }

@@ -5,3 +5,9 @@ body {
 a:link {
   text-decoration: none;
 }
+
+input[name="search"] {
+  height: 40px;
+  width: 25%;
+  display: inline-block;
+}
