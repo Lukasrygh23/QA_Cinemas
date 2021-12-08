@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const navbar = () => {
     return (
-        <nav class="navbar navbar-dark bg-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
                 <a class="navbar-brand" href="http://www.staggeringbeauty.com/" target="_blank">Logo</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -11,13 +11,13 @@ const navbar = () => {
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                         <li class="nav-item">
-                            <Link to="/">Home</Link>
+                            <Link className="text-light" to="/">Home</Link>
                         </li>
                         <li class="nav-item">
-                            <Link to="/OpeningTimes">Opening Times</Link>
+                            <Link className="text-light" to="/OpeningTimes">Opening Times</Link>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a className="text-light" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Current Releases
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -28,7 +28,7 @@ const navbar = () => {
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a className="text-light" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Upcoming Releases
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
@@ -40,16 +40,16 @@ const navbar = () => {
                         </li>
 
                         <li class="nav-item">
-                            <Link to="/FilmClassification">Film Classification</Link>
+                            <Link className="text-light" to="/FilmClassification">Film Classification</Link>
                         </li>
                         <li class="nav-item">
-                            <Link to="/ScreenListings">Screen Listings</Link>
+                            <Link className="text-light" to="/ScreenListings">Screen Listings</Link>
                         </li>
                         <li class="nav-item">
-                            <Link to="/About">About</Link>
+                            <Link className="text-light" to="/About">About</Link>
                         </li>
                         <li class="nav-item">
-                            <Link to="/Contact"></Link>
+                            <Link className="text-light" to="/Contact"></Link>
                         </li>
                     </ul>
                     <form class="d-flex">
