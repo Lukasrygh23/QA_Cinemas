@@ -5,11 +5,16 @@ const mongoose = require("mongoose");
 const { Schema, model } = mongoose;
 
 const bookingSchema = new Schema({
-  id: Number,
+  // id: Number,
+  bookingName: { type: String, required: true },
+  movieTitle: { type: String, required: true },
+  screenType: { enum: ["Regular", "Deluxe"], type: String },
   numberOfSeats: Number,
-  //ChildSchema here
-  consessions: String, //Considered changing to array.
-  screening: String,
+  adult: Number,
+  child: Number,
+  date: Date,
+  time: String,
+  consessions: Boolean, //Considered changing to array.
 });
 
 const Booking = model("Booking", bookingSchema);
