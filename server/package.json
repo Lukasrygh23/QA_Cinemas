@@ -12,6 +12,7 @@
   "author": "Daniel Li, Gabriel Jose, Lukas Rygh, Samuel Sheldon and Solomon Boundy",
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.24.0",
     "concurrently": "^6.4.0",
     "express": "^4.17.1",
     "mongoose": "^6.0.14"
