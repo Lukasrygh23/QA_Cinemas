@@ -11,3 +11,8 @@ input[name="search"] {
   width: 25%;
   display: inline-block;
 }
+
+li.nav-item {
+  height: 40px;
+  width: 25%;
+}
