@@ -10,8 +10,6 @@ const bookingSchema = new Schema({
   //ChildSchema here
   consessions: String, //Considered changing to array.
   screening: String,
-  seats: [
-    { type: Schema.Types.ObjectId, ref: "Seat", }]
 });
 
 const Booking = model("Booking", bookingSchema);
