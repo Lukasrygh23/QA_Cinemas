@@ -1,18 +1,26 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import axios from 'axios';
 import "../css/Card.css"
 
 const UpcomingCardList = () => {
     
-
+    const [loading, setLoading] = useState(false);
     const [data, setData] = useState([]);
+
+    const getPage = () => {
+        axios.get("http://localhost:5000/movieRoutes/getAll")
+            .then((response) => {
+                console.log(response.data.data);
+                setLoading(true);
+            });
+    };
+    useEffect(() => {
+        getPage();
+        console.log(data);
+    }, []);
     
     
     
-    axios.get("http://www.omdbapi.com/?i=tt3896198&apikey=7ae5fc23")
-        .then((response) => {
-            setData(response.data);
-        });
     
         
     
@@ -38,35 +46,41 @@ const UpcomingCardList = () => {
        
     // }
 
-   
-    
+   // console.log("data: " , data)
+    if (loading) {
         return (
         
-            <div>                           
-                       
+            <div>
+            {data.map(e => {           
                 <div class="container">
 
-                <div class="row">
+                    <div class="row">
                         <div class="col-sm-8">
                             <h2 class="text-light mb-5 mt-2">Synopsis</h2>
-                            <p class="text-light">{data.Plot} Release Date: {data.Year}</p>
-                        <h5 class="text-light">{data.Title}</h5>
+                            <p class="text-light">{data.synopsis} </p>
+                            <h5 class="text-light">{data.movieTitle}</h5>
                    
-                        <button class="button-62">
-                            <a href="#">More Information</a>
-                        </button> </div>
-                    <div class="col-sm-4"><img src={data.Poster} alt='' /></div>
+                            <button class="button-62">
+                                <a href="#">More Information</a>
+                            </button> </div>
+                        <div class="col-sm-4"><img src={data.imageURL} alt='' /></div>
                 
                 
     
-                </div>
+                    </div>
                
                 
+                </div>
+                
+                })};
             </div>
-
-            </div>
+        
            
         )
+    } else {
+        return (<h2>loading</h2>)
+    }
+        
 } 
 
  
