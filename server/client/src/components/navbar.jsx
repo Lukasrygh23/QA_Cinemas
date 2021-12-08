@@ -22,7 +22,9 @@ const navbar = () => {
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li class="nav-item"><Link class="dropdown-item" to="/movie/no_time_to_die">No Time To Die</Link></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="#">Movie #2</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="#">Movie #3</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="#">Movie #4</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -31,7 +33,9 @@ const navbar = () => {
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li class="nav-item"><Link class="dropdown-item" to="/NewReleases">View All</Link></li>
-                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="#">Movie #2</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="#">Movie #3</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="#">Movie #4</a></li>
                             </ul>
                         </li>
 
