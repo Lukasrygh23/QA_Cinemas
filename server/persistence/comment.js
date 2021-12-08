@@ -1,12 +1,14 @@
 //Comments
 //importing mongoose
 const mongoose = require("mongoose");
+const thread = require("./thread");
 //Create Schema and Model
 const { Schema, model } = mongoose;
 
 const commentSchema = new Schema({
   username: String,
-  text: String
+  text: String,
+  thread_id: thread.thread_id,
   //This is a very imaginiative Schema
 });
 
