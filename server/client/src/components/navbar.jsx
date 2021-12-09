@@ -9,7 +9,7 @@ const navbar = () => {
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
+                    <ul class="navbar-nav nav-fill w-100 justify-content-center">
                         <li class="nav-item">
                             <Link className="text-light" to="/">Home</Link>
                         </li>
@@ -22,9 +22,9 @@ const navbar = () => {
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li class="nav-item"><Link class="dropdown-item" to="/movie/no_time_to_die">No Time To Die</Link></li>
-                                <li class="nav-item"><a class="dropdown-item" href="#">Movie #2</a></li>
-                                <li class="nav-item"><a class="dropdown-item" href="#">Movie #3</a></li>
-                                <li class="nav-item"><a class="dropdown-item" href="#">Movie #4</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="#">Dune</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="#">Eternals</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="#">The Last Duel</a></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -33,9 +33,10 @@ const navbar = () => {
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li class="nav-item"><Link class="dropdown-item" to="/NewReleases">View All</Link></li>
-                                <li class="nav-item"><a class="dropdown-item" href="#">Movie #2</a></li>
-                                <li class="nav-item"><a class="dropdown-item" href="#">Movie #3</a></li>
-                                <li class="nav-item"><a class="dropdown-item" href="#">Movie #4</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="#">Spider - Man: No Way Home</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="#">The Matrix Resurrections</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="#">The King's Man</a></li>
+                                <li class="nav-item"><a class="dropdown-item" href="#">The Batman</a></li>
                             </ul>
                         </li>
 
