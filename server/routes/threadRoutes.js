@@ -40,12 +40,16 @@ router.get("/getThread/:id", (req, res, next) => {
   });
 });
 
-router.get("/getComment/:id", (req, res, next) => {
-  console.log(req.params.id);
-  Comment.findById(req.params.id, (error, result) => {
+router.get("/getComment/:threadId/:id", (req, res, next) => {
+    console.log(req.params.threadId);
+    console.log(req.params.id);
+    const threadId = req.params.threadId;
+    const commentId = req.params.id;
+    Thread.find({"id":threadId}, {comments: {$elemMatch: {_id: commentId}}}, (error, result) => {
     if (error) {
       next(error);
     } else {
+        //TODO CONVERT
       res.status(200).send(result);
     }
   });
