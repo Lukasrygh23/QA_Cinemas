@@ -27,4 +27,4 @@ const threadSchema = new Schema({
 
 const Thread = model("Thread", threadSchema);
 
-module.exports = { Thread: Thread };
+module.exports = { Thread: Thread, Comment: Comment };
