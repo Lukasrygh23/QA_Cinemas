@@ -47,21 +47,21 @@ router.put("/addComment/:thread", (req, res, next) => {
   );
 });
 
-router.put("/editComment/:threadId/:commentId", (req, res, next) => {
+router.put("/editComment/:commentId", (req, res, next) => {
   const comment = new Comment(req.body);
-  const threadId = req.params.threadId;
+
   const commentId = req.params.commentId;
   console.log(comment);
 
-  Thread.findOneAndUpdate(
-    { id: threadId },
-    { $set: { "comments.$[element].text": "comment.text" } },
-    { arrayFilters: [{ "element._id": { threadId } }] },
+  Thread.updateMany(
+    {},
+    { $set: { "comments.$[element].text": comment.text} },
+      { arrayFilters: [{ "element._id": commentId }] },
     (error, result) => {
       if (error) {
         next(error);
       } else {
-        res.status(201).send(`${result} saved as an edit!`);
+        res.status(201).send(`Comment Edited!`);
       }
     }
   );
