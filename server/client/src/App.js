@@ -6,6 +6,7 @@ import OpeningTimes from './openingTimes';
 import ScreenListings from './screenListingsPage';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import FilmClassificationPage from './FilmClassificationPage';
+import HowToGetHerePage from './HowToGetHerePage';
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
         </Route>
         <Route path="/FilmClassification">
           <FilmClassificationPage/>
+        </Route>
+        <Route path="/HowToGetHere">
+          <HowToGetHerePage/>
         </Route>
       </Switch>
     </Router>

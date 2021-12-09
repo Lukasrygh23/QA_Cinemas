@@ -5,7 +5,7 @@ const FilmClassification = () => {
         <>
             <div class="container">
   <div id="row1" class="row mt-5">
-                <div class="col-lg-6 text-light"><h2>Film Classification</h2>
+                <div class="col-lg-6 text-light"><h2 id="filmClassTitle">Film Classification</h2>
                 </div>
                 <div class="col-lg-6 text-light"><a href="https://www.bbfc.co.uk" target="_blank">
                 <img class="w-25 h25" src="https://darkroom.bbfc.co.uk/1920/a75a9b2247cdca4d108fe8893ad4b23a:9112b02833dc0b494974cd966693ec60/logo-website.png" alt="bbfc-logo" />
