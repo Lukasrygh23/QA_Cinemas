@@ -5,6 +5,7 @@ import BookingNoTimeToDiePage from './BookingNoTimeToDiePage';
 import OpeningTimes from './openingTimes';
 import ScreenListings from './screenListingsPage';
 import AboutPage from './aboutPage';
+import ContactPage from './contactPage';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import FilmClassificationPage from './FilmClassificationPage';
 
@@ -32,7 +33,10 @@ function App() {
           <AboutPage />
         </Route>
         <Route path="/FilmClassification">
-          <FilmClassificationPage/>
+          <FilmClassificationPage />
+        </Route>
+        <Route path="/Contact">
+          <ContactPage />
         </Route>
       </Switch>
     </Router>

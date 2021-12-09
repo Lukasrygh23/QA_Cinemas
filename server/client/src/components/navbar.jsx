@@ -50,7 +50,7 @@ const navbar = () => {
                             <Link className="text-light" to="/About">About</Link>
                         </li>
                         <li class="nav-item">
-                            <Link className="text-light" to="/Contact"></Link>
+                            <Link className="text-light" to="/Contact">Contact Us</Link>
                         </li>
                     </ul>
                     <form class="d-flex">
