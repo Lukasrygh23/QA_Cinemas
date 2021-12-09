@@ -1,4 +1,4 @@
-import '../css/filmClassification.css'
+import './css/filmClassification.css'
 
 const FilmClassification = () => {
     return (
