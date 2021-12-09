@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import DCard from "./DicussionCardGenerator";
-import CCard from "./CommentCardGenerator";
+import DiscussionFormPage from "./DiscussionFormPage";
 const Discussion = () => {
   //initial version of this was taken from a comment section example on : https://mdbootstrap.com/docs/standard/extended/comments/#section-2
 
@@ -55,10 +55,8 @@ const Discussion = () => {
           data.map((Thread) => (
             <DCard Thread={Thread} />
             //Iterate over every card
-
           ))
         }
-
       </>
     );
   }

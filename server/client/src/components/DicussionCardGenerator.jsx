@@ -1,5 +1,6 @@
 import { render } from "react-dom";
 import "../css/Card.css";
+import DiscussionFormPage from "./DiscussionFormPage";
 const DicussionCardGenerator = (props) => {
   const { Thread } = props;
   console.log(Thread);
@@ -23,13 +24,7 @@ const DicussionCardGenerator = (props) => {
               </div>
               <br />
               <div>
-                <input type="text" id="CommentBox"></input>
-                <br />
-                <input type="text" id="UsernameBox"></input>
-                <br />
-                <button type="button" id="replyButton">
-                  Have your say!
-                </button>
+                <DiscussionFormPage />
               </div>
             </div>
             <hr className="hrTag" />
