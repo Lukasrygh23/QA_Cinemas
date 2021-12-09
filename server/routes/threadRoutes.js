@@ -28,7 +28,7 @@ router.get("/getAll", (req, res) => {
     });
 });
 
-router.put("/addComment/:thread", (req, res) => {
+router.put("/addComment/:thread", (req, res, next) => {
     const comment = new Comment(req.body);
     const threadId = req.params.thread;
     console.log(comment);
@@ -42,6 +42,23 @@ router.put("/addComment/:thread", (req, res) => {
         }
     });
 
+});
+
+router.put("/editComment/:threadId/:commentId", (req, res, next) => {
+    const comment = new Comment(req.body);
+    const threadId = req.params.threadId;
+    const commentId = req.params.commentId;
+    console.log(comment);
+
+    Thread.findOneAndUpdate({ id: threadId },
+        { $set: { "comments.$[element].text": "comment.text"} }, { arrayFilters: [{ "element._id": {threadId} }] }, (error, result) => {
+            if (error) {
+                next(error);
+            } else {
+                res.status(201).send(`${result} saved as an edit!`);
+            }
+        }
+    )
 });
 
 module.exports = router;
