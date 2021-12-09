@@ -6,7 +6,8 @@ const { Schema, model } = mongoose;
 
 const commentSchema = new Schema({
   username: String,
-  text: String
+  text: String,
+  thread: String
   //This is a very imaginiative Schema
 });
 

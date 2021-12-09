@@ -4,8 +4,9 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const movie = require("./routes/moviesRoutes.js");
-
 const booking = require("./routes/bookingRoutes.js");
+const thread = require("./routes/threadRoutes.js");
+
 
 const app = express();
 
@@ -47,6 +48,7 @@ mongoose.connect(DatabaseUrl, { useNewUrlParser: true }, (error) => {
 
 app.use("/movieRoutes", movie);
 app.use("/bookingRoutes", booking);
+app.use("/threadRoutes", thread);
 app.use(errorLogger);
 
 //simple usage tutorial followed, hopefully should work
