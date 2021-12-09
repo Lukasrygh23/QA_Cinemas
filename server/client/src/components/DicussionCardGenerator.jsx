@@ -1,8 +1,8 @@
+import { render } from "react-dom";
 import "../css/Card.css";
 const DicussionCardGenerator = (props) => {
   const { Thread } = props;
   console.log(Thread);
-
   return (
     <div>
       <div>
@@ -14,7 +14,12 @@ const DicussionCardGenerator = (props) => {
               <p className="text-light">{Thread.rating} </p>
               <p className="text-light">{Thread.reviewBody} </p>
               <div>
-                {Thread.comments.map(comment => <div><h6 className="text-light">{comment.username}</h6><p className="text-light">{comment.text}</p></div>)}
+                {Thread.comments.map((comment) => (
+                  <div>
+                    <h6 className="text-light">{comment.username}</h6>
+                    <p className="text-light">{comment.text}</p>
+                  </div>
+                ))}
               </div>
               <br />
               <div>
@@ -22,7 +27,9 @@ const DicussionCardGenerator = (props) => {
                 <br />
                 <input type="text" id="UsernameBox"></input>
                 <br />
-                <button type="button" id="replyButton">Have your say!</button>
+                <button type="button" id="replyButton">
+                  Have your say!
+                </button>
               </div>
             </div>
             <hr className="hrTag" />
