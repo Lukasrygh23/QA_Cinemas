@@ -113,4 +113,17 @@ router.delete("/deleteComment/:commentId", (req, res, next) => {
   );
 });
 
+router.delete("/deleteThread/:threadId", (req, res, next) => {
+    const threadId = req.params.threadId;
+    console.log(threadId);
+
+    Thread.deleteOne({ id: threadId }, (error, result, next) => {
+        if (error) {
+            next(error);
+        } else {
+            res.status(204).send(`${result} has been deleted`);
+        }
+    } )
+})
+
 module.exports = router;
