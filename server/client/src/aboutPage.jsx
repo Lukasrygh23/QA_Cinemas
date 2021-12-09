@@ -9,7 +9,7 @@ const aboutPage = () => {
                 <li class="list-group-item d-flex justify-content-between align-items-start">
                     <div class="ms-2 me-auto">
                         <div class="fw-bold">Daniel Li</div>
-                        Scrum Master
+                        Scrum Master and Development Team (Front - end)
                     </div>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-start">
@@ -21,7 +21,7 @@ const aboutPage = () => {
                 <li class="list-group-item d-flex justify-content-between align-items-start">
                     <div class="ms-2 me-auto">
                         <div class="fw-bold">Lukas Rygh</div>
-                        Product Owner
+                        Product Owner and Development Team (Back - end)
                     </div>
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-start">
