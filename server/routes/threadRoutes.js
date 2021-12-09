@@ -28,6 +28,18 @@ router.get("/getAll", (req, res) => {
   });
 });
 
+router.get("/getThread/:id", (req, res) => {
+  const id = req.params.id;
+  console.log(id);
+  Thread.find({ id: id }, (error, result) => {
+    if (error) {
+      next(error);
+    } else {
+      res.status(200).send(result);
+    }
+  });
+});
+
 router.put("/addComment/:thread", (req, res, next) => {
   const comment = new Comment(req.body);
   const threadId = req.params.thread;
@@ -55,8 +67,8 @@ router.put("/editComment/:commentId", (req, res, next) => {
 
   Thread.updateMany(
     {},
-    { $set: { "comments.$[element].text": comment.text} },
-      { arrayFilters: [{ "element._id": commentId }] },
+    { $set: { "comments.$[element].text": comment.text } },
+    { arrayFilters: [{ "element._id": commentId }] },
     (error, result) => {
       if (error) {
         next(error);
@@ -84,13 +96,6 @@ router.delete("/deleteComment/:commentId", (req, res, next) => {
       }
     }
   );
-
-  //   Comment.findByIdAndDelete(commentId, (error) => {
-  //     if (error) {
-  //       next(error);
-  //     }
-  //     res.status(202).send("Deleted!");
-  //   });
 });
 
 module.exports = router;
