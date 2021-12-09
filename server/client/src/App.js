@@ -1,4 +1,3 @@
-
 import NavBar from "./components/navbar";
 import HomePage from "./homePage";
 import NoTimeToDiePage from "./NoTimeToDiePage";
@@ -9,6 +8,8 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import FilmClassificationPage from "./FilmClassificationPage";
 import Discussion from "./components/Discussion";
 import AboutPage from "./aboutPage";
+import HowToGetHerePage from './HowToGetHerePage';
+
 
 function App() {
   return (
@@ -38,6 +39,9 @@ function App() {
         </Route>
         <Route path="/Discussion">
           <Discussion />
+        </Route>
+        <Route path="/HowToGetHere">
+          <HowToGetHerePage/>
         </Route>
       </Switch>
     </Router>
