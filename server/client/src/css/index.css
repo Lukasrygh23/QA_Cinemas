@@ -4,15 +4,5 @@ body {
 
 a:link {
   text-decoration: none;
+  display: inline;
 }
-
-/* input[name="search"] {
-  height: 40px;
-  width: 25%;
-  display: inline-block;
-}
-
-li.nav-item {
-  height: 40px;
-  width: 25%;
-} */
