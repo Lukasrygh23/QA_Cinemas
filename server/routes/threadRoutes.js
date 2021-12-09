@@ -28,10 +28,21 @@ router.get("/getAll", (req, res) => {
   });
 });
 
-router.get("/getThread/:id", (req, res) => {
+router.get("/getThread/:id", (req, res, next) => {
   const id = req.params.id;
   console.log(id);
   Thread.find({ id: id }, (error, result) => {
+    if (error) {
+      next(error);
+    } else {
+      res.status(200).send(result);
+    }
+  });
+});
+
+router.get("/getComment/:id", (req, res, next) => {
+  console.log(req.params.id);
+  Comment.findById(req.params.id, (error, result) => {
     if (error) {
       next(error);
     } else {
