@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import DCard from "./DicussionCardGenerator";
+import CCard from "./CommentCardGenerator";
 const Discussion = () => {
   //initial version of this was taken from a comment section example on : https://mdbootstrap.com/docs/standard/extended/comments/#section-2
 
@@ -48,13 +49,16 @@ const Discussion = () => {
     return (
       //<> -> a fragment, can use <div> instead
       <>
-        <h1 class="upcomingTitle ms-5">Upcoming Movies</h1>
+        <h1 class="upcomingTitle ms-5">Ratings and Discussions</h1>
         {
           //to display the data on the page, we need to map over it
           data.map((Thread) => (
             <DCard Thread={Thread} />
+            //Iterate over every card
+
           ))
         }
+
       </>
     );
   }

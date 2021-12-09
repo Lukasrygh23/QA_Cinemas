@@ -8,6 +8,7 @@ import ScreenListings from "./screenListingsPage";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import FilmClassificationPage from "./FilmClassificationPage";
 import Discussion from "./components/Discussion";
+import AboutPage from "./aboutPage";
 
 function App() {
   return (
