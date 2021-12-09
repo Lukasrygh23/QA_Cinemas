@@ -1,7 +1,7 @@
 const openingTimes = () => {
     return (
         <>
-            <h2>Opening Times</h2>
+            <h2 className="text-light">Opening Times</h2>
             <table class="table table-dark table-striped table-hover">
                 <thead>
                     <tr>
@@ -41,7 +41,7 @@ const openingTimes = () => {
                 </tbody>
             </table>
             <br></br>
-            <h2>Opening Times during the holidays</h2>
+            <h2 className="text-light">Opening Times during the holidays</h2>
             <table class="table table-dark table-striped table-hover">
                 <thead>
                     <tr>

@@ -27,4 +27,18 @@ router.get("/getAll", (req, res) => {
   });
 });
 
+//this method uses the id listed for the film and not the object id
+//created by mongodb
+router.get("/getById/:id", (req, res, next) => {
+  const id = req.params.id;
+  console.log(req.params.id);
+  Movie.find({ id: id }, (error, result) => {
+    if (error) {
+      next(error);
+    } else {
+      res.status(200).send(result);
+    }
+  });
+});
+
 module.exports = router;
