@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import DCard from "./DicussionCardGenerator";
 const Discussion = () => {
   //initial version of this was taken from a comment section example on : https://mdbootstrap.com/docs/standard/extended/comments/#section-2
 
@@ -50,8 +51,8 @@ const Discussion = () => {
         <h1 class="upcomingTitle ms-5">Upcoming Movies</h1>
         {
           //to display the data on the page, we need to map over it
-          data.map((mov) => (
-            <UpcomingMovies movie={mov} />
+          data.map((Thread) => (
+            <DCard Thread={Thread} />
           ))
         }
       </>

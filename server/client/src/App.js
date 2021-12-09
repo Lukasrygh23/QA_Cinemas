@@ -1,11 +1,12 @@
-import NavBar from './components/navbar';
-import HomePage from './homePage';
-import NoTimeToDiePage from './NoTimeToDiePage';
-import BookingNoTimeToDiePage from './BookingNoTimeToDiePage';
-import OpeningTimes from './openingTimes';
-import ScreenListings from './screenListingsPage';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import FilmClassificationPage from './FilmClassificationPage';
+import NavBar from "./components/navbar";
+import HomePage from "./homePage";
+import NoTimeToDiePage from "./NoTimeToDiePage";
+import BookingNoTimeToDiePage from "./BookingNoTimeToDiePage";
+import OpeningTimes from "./openingTimes";
+import ScreenListings from "./screenListingsPage";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import FilmClassificationPage from "./FilmClassificationPage";
+import Discussion from "./components/Discussion";
 
 function App() {
   return (
@@ -28,7 +29,10 @@ function App() {
           <ScreenListings />
         </Route>
         <Route path="/FilmClassification">
-          <FilmClassificationPage/>
+          <FilmClassificationPage />
+        </Route>
+        <Route path="/Discussion">
+          <Discussion />
         </Route>
       </Switch>
     </Router>
