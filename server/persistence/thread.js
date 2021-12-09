@@ -4,16 +4,26 @@ const mongoose = require("mongoose");
 //Create Schema and Model
 const { Schema, model } = mongoose;
 
+const commentSchema = new Schema({
+  username: String,
+  text: String,
+  //This is a very imaginiative Schema
+});
 
+const Comment = model("Comment", commentSchema);
 
+//Suggestion = Make THREAD SUBJECT Unique.
 const threadSchema = new Schema({
-  id: number,
+  id: Number,
   userName: String,
+  subject: String,
   rating: { type: Number, min: 0, max: 10 },
   reviewBody: String,
-  comments: [{type: Schema.Types.ObjectId, ref:'Comment'}],
- 
+  comments: [commentSchema],
 });
+
+
+
 
 const Thread = model("Thread", threadSchema);
 

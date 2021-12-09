@@ -2,7 +2,8 @@ const express = require("express");
 const mongoose = require("mongoose");
 const movie = require("./routes/moviesRoutes.js");
 const screening = require("./routes/screeningRoutes.js");
-const booking = require("./routes/bookingRoutes.js")
+const booking = require("./routes/bookingRoutes.js");
+const thread = require("./routes/threadRoutes.js");
 
 const app = express();
 
@@ -28,6 +29,7 @@ mongoose.connect(
 app.use("/movieRoutes", movie);
 app.use("/screeningRoutes", screening);
 app.use("/bookingRoutes", booking);
+app.use("/threadRoutes", thread);
 app.use(errorLogger);
 
 // PORT
