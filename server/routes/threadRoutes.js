@@ -38,7 +38,6 @@ router.put("/addComment/:thread", (req, res) => {
         if (error) {
             next(error);
         } else {
-            console.log(result);
             res.status(201).send(`${result} saved to thread!`);
         }
     });

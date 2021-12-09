@@ -12,9 +12,9 @@ const commentSchema = new Schema({
 
 const Comment = model("Comment", commentSchema);
 
-//Suggestion = Make THREAD SUBJECT Unique.
+
 const threadSchema = new Schema({
-  id: Number,
+  id: {type: Number, unique:true},
   userName: String,
   subject: String,
   rating: { type: Number, min: 0, max: 10 },
