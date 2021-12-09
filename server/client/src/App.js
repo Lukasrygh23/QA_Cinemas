@@ -5,6 +5,7 @@ import BookingNoTimeToDiePage from './BookingNoTimeToDiePage';
 import OpeningTimes from './openingTimes';
 import ScreenListings from './screenListingsPage';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import FilmClassificationPage from './FilmClassificationPage';
 
 function App() {
   return (
@@ -25,6 +26,9 @@ function App() {
         </Route>
         <Route path="/ScreenListings">
           <ScreenListings />
+        </Route>
+        <Route path="/FilmClassification">
+          <FilmClassificationPage/>
         </Route>
       </Switch>
     </Router>
