@@ -9,6 +9,7 @@ import FilmClassificationPage from "./FilmClassificationPage";
 import Discussion from "./components/Discussion";
 import AboutPage from "./aboutPage";
 import HowToGetHerePage from './HowToGetHerePage';
+import LocalVenuesPage from "./LocalVenuesPage";
 
 
 function App() {
@@ -42,6 +43,9 @@ function App() {
         </Route>
         <Route path="/HowToGetHere">
           <HowToGetHerePage/>
+        </Route>
+        <Route path="/LocalVenues">
+          <LocalVenuesPage/>
         </Route>
       </Switch>
     </Router>
