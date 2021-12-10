@@ -2,12 +2,68 @@ import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import DCard from "./DiscussionCardGenerator";
-import DiscussionFormPage from "./DiscussionFormPage";
+//import DiscussionFormPage from "./DiscussionFormPage";
+import DiscussionForm from "./DiscussionForm";
 const Discussion = () => {
   //initial version of this was taken from a comment section example on : https://mdbootstrap.com/docs/standard/extended/comments/#section-2
   const [data, setData] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState(null);
+  const [username, setUsername] = useState("Test");
+  const [comment, setComment] = useState("Hello");
+
+  const usernameHandler = (e) => {
+    setUsername(e.target.value);
+  };
+
+  const commentHandler = (e) => {
+    setComment(e.target.value);
+  };
+
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    
+    let obj = {
+      username: username,
+      text: comment,
+    };
+    const threadId = 1;
+    const url = "http://localhost:5000/threadRoutes/addComment/" + threadId;
+    console.log(obj);
+    console.log(JSON.stringify(obj));
+    console.log(url);
+
+    axios.put(url, JSON.stringify(obj)).then((response) => {
+      setIsLoaded(true);
+      console.log(response);
+
+    }).catch((error) => {
+      setError(error);
+      setIsLoaded(true);
+      console.error(error);
+    })
+
+    /*
+    fetch(url, {
+      method: "PUT",
+      header: {
+        "content-type": "application/JSON",
+      },
+      body: JSON.stringify(obj),
+    }).then((response) => {
+      if (response.status !== 201) {
+        console.error(`status: ${response.status}`);
+      } else {
+        console.log(response);
+      }
+    });*/
+  };
+
+  useEffect(() => {
+    setUsername(username);
+    setComment(comment);
+  });
 
   useEffect(() => {
     setTimeout(() => {
@@ -52,7 +108,7 @@ const Discussion = () => {
           data.map((Thread) => (
             <React.Fragment>
               <DCard Thread={Thread} />
-              <DiscussionFormPage Thread={Thread} />
+              <DiscussionForm Thread={Thread} usernameHandler={usernameHandler} commentHandler={commentHandler} handleSubmit={handleSubmit}/>
             </React.Fragment>
           ))
         }
