@@ -1,8 +1,3 @@
-.interiorCinema {
-    height: 10rem;
-    width: 20rem;
-}
-
 @keyframes moveContent {
     0% {
         transform: translateY(40rem);
@@ -14,34 +9,27 @@
     }
 }
 
-
-
-
-#getHereTitle {
+#row4 {
     color: #ff9a5a;
     -webkit-transition: color 1s;
     -moz-transition: color 1s;
     -ms-transition: color 1s;
     -o-transition: color 1s;
     transition: color 1s;
-}
-
-#getHereTitle:hover {
-    color: #cc5b15;
-}
-
-#row1 {
-    animation: moveContent 1s .1s forwards;
-    opacity: 0;
-}
-
-#row2 {
     animation: moveContent 1s .3s forwards;
     opacity: 0;
 }
 
-#row3 {
+#row4:hover {
+    color: #cc5b15;
+}
+
+#row5 {
     animation: moveContent 1s .5s forwards;
     opacity: 0;
 }
 
+#row6 {
+    animation: moveContent 1s .7s forwards;
+    opacity: 0;
+}
