@@ -1,4 +1,5 @@
 const contactPage = () => {
+
     return (
         <>
             <h1>Contact Us</h1>
@@ -20,7 +21,7 @@ const contactPage = () => {
                     <br></br>
                     <textarea id="emailMessage" placeholder="Enter message here" rows="10" cols="50"></textarea>
                     <br></br>
-                    <button type="submit" value="Send">Send</button>
+                    <button type="submit" value="Send" id="sendBtn">Send</button>
                     <button type="reset" value="Reset">Clear</button>
                 </fieldset>
             </form>
