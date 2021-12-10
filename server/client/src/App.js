@@ -1,12 +1,13 @@
 import ContactPage from './contactPage';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
-import FilmClassificationPage from './FilmClassificationPage';
 import NavBar from "./components/navbar";
 import HomePage from "./homePage";
 import NoTimeToDiePage from "./NoTimeToDiePage";
 import BookingNoTimeToDiePage from "./BookingNoTimeToDiePage";
 import OpeningTimes from "./openingTimes";
 import ScreenListings from "./screenListingsPage";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import ScrollToTop from "./components/ScrollToTop";
+import FilmClassificationPage from "./FilmClassificationPage";
 import Discussion from "./components/Discussion";
 import AboutPage from "./aboutPage";
 import HowToGetHerePage from './HowToGetHerePage';
@@ -15,6 +16,7 @@ import LocalVenuesPage from "./LocalVenuesPage";
 function App() {
   return (
     <Router>
+      <ScrollToTop />
       <NavBar />
       <Switch>
         <Route path="/" exact>
@@ -56,3 +58,4 @@ function App() {
 }
 
 export default App;
+
