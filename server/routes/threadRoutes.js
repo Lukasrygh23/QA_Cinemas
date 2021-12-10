@@ -55,11 +55,13 @@ router.get("/getComment/:threadId/:id", (req, res, next) => {
   });
 });
 
-router.put("/addComment/:thread", (req, res, next) => {
+router.post("/addComment/:thread", (req, res, next) => {
   const comment = new Comment(req.body);
   const threadId = req.params.thread;
   console.log(comment);
+  console.log(req.body);
   console.log(threadId);
+  console.log("Rout Access");
 
   Thread.findOneAndUpdate(
     { id: threadId },

@@ -33,8 +33,10 @@ const Discussion = () => {
     console.log(obj);
     console.log(JSON.stringify(obj));
     console.log(url);
+    const newObj = JSON.stringify(obj);
 
-    axios.put(url, JSON.stringify(obj)).then((response) => {
+    axios.post(url, obj).then((response) => {
+      console.log(newObj);
       setIsLoaded(true);
       console.log(response);
 
