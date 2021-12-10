@@ -6,6 +6,20 @@
     justify-content: center;
 }
 
+#filmClassTitle {
+    color: #ff9a5a;
+    -webkit-transition: color 1s;
+    -moz-transition: color 1s;
+    -ms-transition: color 1s;
+    -o-transition: color 1s;
+    transition: color 1s;
+}
+
+#filmClassTitle:hover {
+    color: #cc5b15;
+}
+
+
 @keyframes moveContent {
     0% {
         transform: translateY(40rem);
