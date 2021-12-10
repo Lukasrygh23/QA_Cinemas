@@ -29,6 +29,7 @@ const Footer = () => {
                         <ul className="list-plain">
                             <li><a href="http://localhost:3000/FilmClassification">Film Classification</a></li>
                             <li><a href="http://localhost:3000/Discussion">Discussion Board</a></li>
+                            <li><a href="http://localhost:3000/Contact">Contact Us</a></li>
                             
                         </ul>
                     </div>
