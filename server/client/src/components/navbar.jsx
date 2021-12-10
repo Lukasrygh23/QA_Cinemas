@@ -39,23 +39,25 @@ const navbar = () => {
                                 <li class="nav-item"><a class="dropdown-item" href="#">The Batman</a></li>
                             </ul>
                         </li>
-
                         <li class="nav-item">
                             <Link className="text-light" to="/FilmClassification">Film Classification</Link>
                         </li>
                         <li class="nav-item">
                             <Link className="text-light" to="/ScreenListings">Screen Listings</Link>
                         </li>
-                        <li class="nav-item">
-                            <Link className="text-light" to="/About">About</Link>
+                        <li class="nav-item dropdown">
+                            <a className="text-light" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Help
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li class="nav-item"><Link class="dropdown-item" to="/About">About</Link></li>
+                                <li class="nav-item"><Link class="dropdown-item" to="/Contact">Contact Us</Link></li>
+                            </ul>
                         </li>
-                        <li class="nav-item">
-                            <Link className="text-light" to="/Contact"></Link>
-                        </li>
+
                     </ul>
                     <form class="d-flex">
                         <input class="form-control me-2" type="search" placeholder="Search" name="search" aria-label="Search"></input>
-                        <button class="button-62 mb-2" type="submit">Search</button>
                     </form>
                 </div>
             </div>

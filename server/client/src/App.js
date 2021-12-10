@@ -1,3 +1,13 @@
+import NavBar from './components/navbar';
+import HomePage from './homePage';
+import NoTimeToDiePage from './NoTimeToDiePage';
+import BookingNoTimeToDiePage from './BookingNoTimeToDiePage';
+import OpeningTimes from './openingTimes';
+import ScreenListings from './screenListingsPage';
+import AboutPage from './aboutPage';
+import ContactPage from './contactPage';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import FilmClassificationPage from './FilmClassificationPage';
 import NavBar from "./components/navbar";
 import HomePage from "./homePage";
 import NoTimeToDiePage from "./NoTimeToDiePage";
@@ -9,7 +19,6 @@ import FilmClassificationPage from "./FilmClassificationPage";
 import Discussion from "./components/Discussion";
 import AboutPage from "./aboutPage";
 import HowToGetHerePage from './HowToGetHerePage';
-
 
 function App() {
   return (
@@ -36,6 +45,9 @@ function App() {
         </Route>
         <Route path="/FilmClassification">
           <FilmClassificationPage />
+        </Route>
+        <Route path="/Contact">
+          <ContactPage />
         </Route>
         <Route path="/Discussion">
           <Discussion />
