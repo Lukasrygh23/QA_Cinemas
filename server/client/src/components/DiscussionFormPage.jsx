@@ -2,8 +2,9 @@ import React, { useEffect, useState } from "react";
 import DiscussionForm from "./DiscussionForm";
 
 const DiscussionFormPage = (props) => {
-  const [username, setUsername] = useState();
-  const [comment, setComment] = useState();
+  const { uName, com } = props;
+  const [username, setUsername] = useState(uName);
+  const [comment, setComment] = useState(com);
 
   const usernameHandler = (e) => {
     setUsername(e.target.value);
@@ -13,7 +14,8 @@ const DiscussionFormPage = (props) => {
     setComment(e.target.value);
   };
 
-  const url = "/addComment/" + props.Thread.id;
+  const url =
+    "http://localhost:5000/threadRoutes/addComment/" + props.Thread.id;
 
   console.log(username);
   console.log(comment);
@@ -37,7 +39,8 @@ const DiscussionFormPage = (props) => {
       if (response.status !== 201) {
         console.error(`status: ${response.status}`);
       } else {
-        console.log(response);
+        console.log(usernameHandler);
+        console.log(commentHandler);
       }
     });
   };
