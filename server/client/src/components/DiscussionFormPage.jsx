@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import DiscussionForm from "./DiscussionForm";
 
-const DiscussionFormPage = (threadId) => {
+const DiscussionFormPage = (props) => {
   const [username, setUsername] = useState();
   const [comment, setComment] = useState();
 
@@ -13,7 +13,7 @@ const DiscussionFormPage = (threadId) => {
     setComment(e.target.value);
   };
 
-  const url = "/addComment/" + threadId;
+  const url = "/addComment/" + props.Thread.id;
 
   console.log(username);
   console.log(comment);

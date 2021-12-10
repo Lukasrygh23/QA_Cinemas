@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import DCard from "./DiscussionCardGenerator";
+import DiscussionFormPage from "./DiscussionFormPage";
 const Discussion = () => {
   //initial version of this was taken from a comment section example on : https://mdbootstrap.com/docs/standard/extended/comments/#section-2
   const [data, setData] = useState([]);
@@ -49,11 +50,12 @@ const Discussion = () => {
         {
           //to display the data on the page, we need to map over it
           data.map((Thread) => (
-            <DCard Thread={Thread} />
-            //Iterate over every card
+            <React.Fragment>
+              <DCard Thread={Thread} />
+              <DiscussionFormPage Thread={Thread} />
+            </React.Fragment>
           ))
         }
-        <DiscussionForm Thread />
       </>
     );
   }
