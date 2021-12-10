@@ -1,15 +1,11 @@
 import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
-import DCard from "./DicussionCardGenerator";
-import DiscussionFormPage from "./DiscussionFormPage";
+import DCard from "./DiscussionCardGenerator";
 const Discussion = () => {
   //initial version of this was taken from a comment section example on : https://mdbootstrap.com/docs/standard/extended/comments/#section-2
-
   const [data, setData] = useState([]);
-
   const [isLoaded, setIsLoaded] = useState(false);
-
   const [error, setError] = useState(null);
 
   useEffect(() => {
@@ -57,6 +53,7 @@ const Discussion = () => {
             //Iterate over every card
           ))
         }
+        <DiscussionForm Thread />
       </>
     );
   }

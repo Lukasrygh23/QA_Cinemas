@@ -1,6 +1,5 @@
-import { render } from "react-dom";
+import { useState, useEffect } from "react-dom";
 import "../css/Card.css";
-import DiscussionFormPage from "./DiscussionFormPage";
 const DicussionCardGenerator = (props) => {
   const { Thread } = props;
   console.log(Thread);
@@ -23,15 +22,13 @@ const DicussionCardGenerator = (props) => {
                 ))}
               </div>
               <br />
-              <div>
-                <DiscussionFormPage threadId={Thread.id} />
-              </div>
+              <div></div>
             </div>
-            <hr className="hrTag" />
           </div>
+          <hr className="hrTag" />
         </div>
-        <br />
       </div>
+      <br />
     </div>
   );
 };

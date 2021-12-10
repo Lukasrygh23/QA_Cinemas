@@ -13,7 +13,7 @@ const DiscussionFormPage = (threadId) => {
     setComment(e.target.value);
   };
 
-  const url = '/addComment/' + threadId;
+  const url = "/addComment/" + threadId;
 
   console.log(username);
   console.log(comment);
@@ -26,7 +26,7 @@ const DiscussionFormPage = (threadId) => {
     };
     console.log(obj);
     console.log(JSON.stringify(obj));
-    console.log(url); 
+    console.log(url);
     fetch(url, {
       method: "PUT",
       header: {
@@ -42,7 +42,13 @@ const DiscussionFormPage = (threadId) => {
     });
   };
 
-  return <DiscussionForm username={usernameHandler} comment={commentHandler} handleSubmit={handleSubmit} />;
+  return (
+    <DiscussionForm
+      username={usernameHandler}
+      comment={commentHandler}
+      handleSubmit={handleSubmit}
+    />
+  );
 };
 
 export default DiscussionFormPage;
