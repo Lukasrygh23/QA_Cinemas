@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import DiscussionForm from "./DiscussionForm";
 
-const DiscussionFormPage = () => {
-  const [username, setUsername] = useState("");
-  const [comment, setComment] = useState("");
+const DiscussionFormPage = (threadId) => {
+  const [username, setUsername] = useState();
+  const [comment, setComment] = useState();
 
   const usernameHandler = (e) => {
     setUsername(e.target.value);
@@ -13,13 +13,21 @@ const DiscussionFormPage = () => {
     setComment(e.target.value);
   };
 
+  const url = '/addComment/' + threadId;
+
+  console.log(username);
+  console.log(comment);
+
   const handleSubmit = (event) => {
     event.preventDefault();
     let obj = {
       username: username,
       comment: comment,
     };
-    fetch('"/addComment/:thread', {
+    console.log(obj);
+    console.log(JSON.stringify(obj));
+    console.log(url); 
+    fetch(url, {
       method: "PUT",
       header: {
         "content-type": "application/JSON",
@@ -34,7 +42,7 @@ const DiscussionFormPage = () => {
     });
   };
 
-  return <DiscussionForm username={username} comment={comment} />;
+  return <DiscussionForm username={usernameHandler} comment={commentHandler} handleSubmit={handleSubmit} />;
 };
 
 export default DiscussionFormPage;

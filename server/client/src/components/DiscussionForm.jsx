@@ -17,7 +17,7 @@ const DiscussionForm = (props) => {
             type="text"
             id="username"
             onChange={props.usernameHandler}
-            readOnly
+            required
           />
         </div>
         <div>

@@ -24,7 +24,7 @@ const DicussionCardGenerator = (props) => {
               </div>
               <br />
               <div>
-                <DiscussionFormPage />
+                <DiscussionFormPage threadId={Thread.id} />
               </div>
             </div>
             <hr className="hrTag" />
