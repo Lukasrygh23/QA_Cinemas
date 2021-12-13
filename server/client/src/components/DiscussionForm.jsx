@@ -1,7 +1,7 @@
 const DiscussionForm = (props) => {
   return (
     <div class="row">
-      <h5>Have you say!</h5>
+      <h5 className="text-light">Have your say!</h5>
       <form
         onSubmit={props.handleSubmit}
         noValidate
@@ -14,7 +14,7 @@ const DiscussionForm = (props) => {
             Enter Name:{" "}
           </label>
           <input
-            className="form-control"
+            className=""
             type="text"
             id="username"
             onChange={props.usernameHandler}
@@ -27,7 +27,7 @@ const DiscussionForm = (props) => {
             Enter Comment:{" "}
           </label>
           <input
-            className="formControl"
+            className="form-control"
             type="text"
             id="comment"
             onChange={props.commentHandler}

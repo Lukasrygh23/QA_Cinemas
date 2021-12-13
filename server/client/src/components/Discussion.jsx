@@ -4,6 +4,7 @@ import axios from "axios";
 import DCard from "./DiscussionCardGenerator";
 //import DiscussionFormPage from "./DiscussionFormPage";
 import DiscussionForm from "./DiscussionForm";
+import DiscussionNewThreadForm from "./DiscussionNewThreadForm";
 const Discussion = () => {
   //initial version of this was taken from a comment section example on : https://mdbootstrap.com/docs/standard/extended/comments/#section-2
   const [data, setData] = useState([]);
@@ -47,6 +48,10 @@ const Discussion = () => {
     })
 
     window.location.reload(false);
+
+  };
+
+  const newThread = (event) => {
 
   };
 
@@ -94,10 +99,11 @@ const Discussion = () => {
           data.map((Thread) => (
             <React.Fragment>
               <DCard Thread={Thread} />
-              <DiscussionForm Thread={Thread} usernameHandler={usernameHandler} commentHandler={commentHandler} handleSubmit={handleSubmit}/>
+              <DiscussionForm Thread={Thread} usernameHandler={usernameHandler} commentHandler={commentHandler} handleSubmit={handleSubmit} />
             </React.Fragment>
           ))
         }
+        <DiscussionNewThreadForm />
       </>
     );
   }
