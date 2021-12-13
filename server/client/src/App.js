@@ -8,11 +8,11 @@ import AboutPage from './aboutPage';
 import ContactPage from './ContactPage';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import FilmClassificationPage from './FilmClassificationPage';
-import ContactPage from './contactPage';
 import Discussion from "./components/Discussion";
 import HowToGetHerePage from './HowToGetHerePage';
 import LocalVenuesPage from "./LocalVenuesPage";
 import CommentModeration from "./CommentModeration";
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
@@ -51,10 +51,10 @@ function App() {
           <HowToGetHerePage />
         </Route>
         <Route path="/LocalVenues">
-          <LocalVenuesPage/>
+          <LocalVenuesPage />
         </Route>
         <Route path="/secretModBackend">
-          <CommentModeration/>
+          <CommentModeration />
         </Route>
       </Switch>
     </Router>
