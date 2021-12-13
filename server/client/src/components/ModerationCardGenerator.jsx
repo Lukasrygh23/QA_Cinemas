@@ -19,6 +19,7 @@ const ModerationCardGenerator = (props) => {
                             </p>
                             <p className="text-light">{Thread.reviewBody} </p>
                         </div>
+                        <button type="button" class="button-30" onClick={props.deleteThread}>Delete this entire thread!</button>
                     </div>
                 </div>
             </div>

@@ -91,9 +91,9 @@ const CommentModeration = () => {
                     //to display the data on the page, we need to map over it
                     data.map((Thread) => (
                         <React.Fragment>
-                            <ModCard Thread={Thread} />
+                            <ModCard Thread={Thread} deleteThread = {e => deleteThread(e, Thread._id)} />
                             {Thread.comments.map((Comment) => 
-                                <CommentWithDelete Comment={Comment}/>
+                                <CommentWithDelete Comment={Comment} deleteComment={e => deleteComment(e, Comment._id)}/>
                             )}
                         </React.Fragment>
                     ))
