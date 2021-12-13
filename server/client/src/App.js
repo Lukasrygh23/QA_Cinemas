@@ -1,15 +1,15 @@
+import NavBar from './components/navbar';
+import HomePage from './homePage';
+import NoTimeToDiePage from './NoTimeToDiePage';
+import BookingNoTimeToDiePage from './BookingNoTimeToDiePage';
+import OpeningTimes from './openingTimes';
+import ScreenListings from './screenListingsPage';
+import AboutPage from './aboutPage';
+import ContactPage from './ContactPage';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import FilmClassificationPage from './FilmClassificationPage';
 import ContactPage from './contactPage';
-import NavBar from "./components/navbar";
-import HomePage from "./homePage";
-import NoTimeToDiePage from "./NoTimeToDiePage";
-import BookingNoTimeToDiePage from "./BookingNoTimeToDiePage";
-import OpeningTimes from "./openingTimes";
-import ScreenListings from "./screenListingsPage";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import ScrollToTop from "./components/ScrollToTop";
-import FilmClassificationPage from "./FilmClassificationPage";
 import Discussion from "./components/Discussion";
-import AboutPage from "./aboutPage";
 import HowToGetHerePage from './HowToGetHerePage';
 import LocalVenuesPage from "./LocalVenuesPage";
 import CommentModeration from "./CommentModeration";
@@ -48,7 +48,7 @@ function App() {
           <Discussion />
         </Route>
         <Route path="/HowToGetHere">
-          <HowToGetHerePage/>
+          <HowToGetHerePage />
         </Route>
         <Route path="/LocalVenues">
           <LocalVenuesPage/>

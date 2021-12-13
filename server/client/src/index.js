@@ -1,8 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './css/index.css';
-import './css/openingTimes.css';
-import './css/aboutPage.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 

@@ -7,6 +7,15 @@ a:link {
   display: inline;
 }
 
+#navbarDropdown {
+  color: #ff9a5a;
+  transition: color 1s;
+}
+
+#navbarHelpDropdown {
+  color: #ffffff;
+}
+
 #logo {
   background-color: transparent;
 }
@@ -50,4 +59,3 @@ a:link {
 .center-film-booking {
   margin-left: 300px;
 }
-
