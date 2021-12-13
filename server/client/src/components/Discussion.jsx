@@ -2,11 +2,9 @@ import React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import DCard from "./DiscussionCardGenerator";
-//import DiscussionFormPage from "./DiscussionFormPage";
 import DiscussionForm from "./DiscussionForm";
 import DiscussionNewThreadForm from "./DiscussionNewThreadForm";
 const Discussion = () => {
-  //initial version of this was taken from a comment section example on : https://mdbootstrap.com/docs/standard/extended/comments/#section-2
   const [data, setData] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState(null);
@@ -30,26 +28,27 @@ const Discussion = () => {
 
   const idHandler = (e) => {
     setId(e.target.value);
-  }
+
+  };
 
   const threadUsernameHandler = (e) => {
     setThreadUsername(e.target.value);
-  }
+  };
 
   const subjectHandler = (e) => {
     setSubject(e.target.value);
-  }
+  };
 
   const ratingHandler = (e) => {
     setRating(e.target.value);
-  }
+  };
 
   const threadHandler = (e) => {
     setReviewBody(e.target.value);
-  }
+  };
 
 
-  const handleSubmit = (event) => {
+  const handleSubmit = (event, id) => {
     event.preventDefault();
     
     let obj = {
@@ -72,7 +71,7 @@ const Discussion = () => {
       console.error(error);
     })
 
-    //window.location.reload(false);
+    window.location.reload(false);
 
   };
 
@@ -146,7 +145,7 @@ const Discussion = () => {
           data.map((Thread) => (
             <React.Fragment>
               <DCard Thread={Thread} />
-              <DiscussionForm Thread={Thread} usernameHandler={usernameHandler} commentHandler={commentHandler} idHandler={idHandler} handleSubmit={handleSubmit} />
+              <DiscussionForm Thread={Thread} usernameHandler={usernameHandler} commentHandler={commentHandler} handleSubmit={e => handleSubmit(e, Thread._id)} />
             </React.Fragment>
           ))
         }

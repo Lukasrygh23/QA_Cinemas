@@ -35,18 +35,6 @@ const DiscussionForm = (props) => {
             required
           />
         </div>
-        <div>
-          <label className="form-label text-light" for="id">
-          </label>
-          <input
-            className=""
-            type="text"
-            id="id"
-            onInput={props.idHandler}
-            value={Thread._id}
-            readOnly
-          />
-        </div>
         <button class="button-62"> Submit Comment</button>
       </form>
     </div>
