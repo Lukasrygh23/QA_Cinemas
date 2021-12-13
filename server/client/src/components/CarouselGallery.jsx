@@ -1,7 +1,6 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import "../css/carouselContainer.css";
 import { Carousel } from "react-responsive-carousel";
-import { Link } from "react-router-dom";
 
 const movie1Handler = () => {
   window.open("http://localhost:3000/movie/no_time_to_die", "_self");
@@ -9,6 +8,30 @@ const movie1Handler = () => {
 
 const movie1BookingHandler = () => {
   window.open("http://localhost:3000/booking/no_time_to_die", "_self");
+};
+
+const movie2Handler = () => {
+  window.open("http://localhost:3000/movie/dune", "_self");
+};
+
+const movie2BookingHandler = () => {
+  window.open("http://localhost:3000/booking/dune", "_self");
+};
+
+const movie3Handler = () => {
+  window.open("http://localhost:3000/movie/eternals", "_self");
+};
+
+const movie3BookingHandler = () => {
+  window.open("http://localhost:3000/booking/eternals", "_self");
+};
+
+const movie4Handler = () => {
+  window.open("http://localhost:3000/movie/the_last_duel", "_self");
+};
+
+const movie4BookingHandler = () => {
+  window.open("http://localhost:3000/booking/the_last_duel", "_self");
 };
 
 const CarouselGallery = () => {
@@ -42,14 +65,16 @@ const CarouselGallery = () => {
           Book now
         </button>
       </div>
-      <div>
+      <div className="divContainer">
         <img
+          style={{ "pointer-events": "all" }}
+          onClick={movie2Handler}
           className="carouselImages"
           src="https://images5.alphacoders.com/117/thumb-1920-1174594.jpg"
           alt="Dune"
         />
         <p className="legend mb-5 fw-bold">
-          <span className="me-5">Dune</span>{" "}
+          <span className="me-5">Dune: Part One</span>{" "}
           <span className="fw-light fst-italic">
             Director: Denis Villeneuve
           </span>{" "}
@@ -57,12 +82,14 @@ const CarouselGallery = () => {
             Stars: Timothée Chalamet, Rebecca Ferguson, Zendaya
           </span>
         </p>
-        <button className="button-62 mb-2" onClick={movie1BookingHandler}>
+        <button className="button-62 mb-2" onClick={movie2BookingHandler}>
           Book now
         </button>
       </div>
-      <div>
+      <div className="divContainer">
         <img
+          style={{ "pointer-events": "all" }}
+          onClick={movie3Handler}
           className="carouselImages"
           src="https://images2.alphacoders.com/118/thumb-1920-1180551.jpg"
           alt="Eternals"
@@ -74,12 +101,14 @@ const CarouselGallery = () => {
             Stars: Gemma Chan, Richard Madden, Angelina Jolie
           </span>
         </p>
-        <button className="button-62 mb-2" onClick={movie1BookingHandler}>
+        <button className="button-62 mb-2" onClick={movie3BookingHandler}>
           Book now
         </button>
       </div>
-      <div>
+      <div className="divContainer">
         <img
+          style={{ "pointer-events": "all" }}
+          onClick={movie4Handler}
           className="carouselImages"
           src="https://images8.alphacoders.com/117/thumb-1920-1176366.jpg"
           alt="The Last Duel"
@@ -91,7 +120,7 @@ const CarouselGallery = () => {
             Stars: Matt Damon, Adam Driver, Jodie Comer
           </span>
         </p>
-        <button className="button-62 mb-2" onClick={movie1BookingHandler}>
+        <button className="button-62 mb-2" onClick={movie4BookingHandler}>
           Book now
         </button>
       </div>

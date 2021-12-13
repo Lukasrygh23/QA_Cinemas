@@ -3,13 +3,13 @@ import BookingForm from "./components/BookingForm";
 import StripeCheckout from 'react-stripe-checkout';
 import './css/BookingPage.css'
 
-const BookingNoTimeToDiePage = () => {
+const BookingEternalsPage = () => {
     const time1 = "15:15"
     const time2 = "18:45"
     const time3 = "22:30"
     const startDate = "2021-12-17"
     const endDate = "2021-12-23"
-    const movie = "No Time To Die"
+    const movie = "Eternals"
     const certificate = "12A"
     const [date, setDate] = useState()
     const [time, setTime] = useState("15:15")
@@ -72,7 +72,7 @@ const BookingNoTimeToDiePage = () => {
         const handleSubmit = (event) => {
         event.preventDefault();
         let obj = {
-            movieTitle: "No Time To Die",
+            movieTitle: "Eternals",
             date: date,
             time: time,
             bookingName: bookingName,
@@ -108,7 +108,7 @@ const BookingNoTimeToDiePage = () => {
     return (
         <React.Fragment>
             {!paymentReady && (
-                <BookingForm movie={movie} noOfAdultsHandler={noOfAdultsHandler} price={price} noOfChildrenHandler={noOfChildrenHandler} concessionsHandler={concessionsHandler} handleSubmit={handleSubmit} dateHandler={dateHandler} timeHandler={timeHandler} bookingNameHandler={bookingNameHandler} time1={time1} time2={time2} time3={time3} certificate={certificate} startDate={startDate} endDate={endDate} />)}
+                <BookingForm movie={movie} noOfAdultsHandler={noOfAdultsHandler} price={price} noOfChildrenHandler={noOfChildrenHandler} concessionsHandler={concessionsHandler} handleSubmit={handleSubmit} dateHandler={dateHandler} timeHandler={timeHandler} bookingNameHandler={bookingNameHandler} time1={time1} time2={time2} time3={time3} certificate={certificate} startDate={startDate} endDate={endDate}/>)}
             {paymentReady && !paymentConfirmed && (
                 <div>
                     <h5 className="text-light mt-5 ms-5">Booking received!</h5>
@@ -133,4 +133,4 @@ const BookingNoTimeToDiePage = () => {
      );
 }
 
-export default BookingNoTimeToDiePage;
+export default BookingEternalsPage;

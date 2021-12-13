@@ -4,16 +4,16 @@ import VideoDetail from '../src/components/VideoDetail';
 import useVideos from './hooks/useVideos';
 import FilmCard from '../src/components/FilmCard'
 
-const NoTimeToDiePage = () => {
-    const bookingFormURLParam = 'no_time_to_die'
+const DunePage = () => {
+    const bookingFormURLParam = 'dune'
     const [selectedVideo, setSelectedVideo] = useState(null);
-    const [videos, search] = useVideos('No Time To Die Trailer');
+    const [videos, search] = useVideos('Dune Trailer');
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(true)
     const [videoLoading, setVideoLoading] = useState(true)
 
     const getData = async () => {
-        const res = await axios.get(`http://localhost:5000/movieRoutes/getById/1`)
+        const res = await axios.get(`http://localhost:5000/movieRoutes/getById/3`)
         const data = res.data;
         setData(data);
         setLoading(false)
@@ -39,4 +39,4 @@ const NoTimeToDiePage = () => {
     }
 }
 
-export default NoTimeToDiePage;
+export default DunePage;

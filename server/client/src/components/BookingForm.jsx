@@ -10,15 +10,15 @@ const BookingForm = (props) => {
             </div>
             <div class="mb-3">
               <label class="form-label text-light" for="date">Date</label>
-              <input class="form-control" type="date" id="date" onChange={props.dateHandler} min="2021-12-17" max="2021-12-23" required />
+              <input class="form-control" type="date" id="date" onChange={props.dateHandler} min={props.startDate} max={props.endDate} required />
               <div class="valid-feedback text-light">Looks good!</div>
             </div>
             <div class="mb-3">
               <label class="form-label text-light" for="time">Time</label>
               <select class="form-select" id="time" onChange={props.timeHandler}>
-                <option value="15:15" selected>15.15</option>
-                <option value="19:45">19:45</option>
-                <option value="23:30">23:30</option>
+                <option value={props.time1} selected>{props.time1}</option>
+                <option value={props.time2}>{props.time2}</option>
+                <option value={props.time3}>{props.time3}</option>
               </select>
             </div>
             <div class="mb-3">
@@ -27,15 +27,17 @@ const BookingForm = (props) => {
               <div class="valid-feedback text-light">Looks good!</div>
             </div>
             <div class="mb-3">
-              <label class="form-label text-light" for="adult">Number of adults</label>
+              <label class="form-label text-light" for="adult">Number of adults <span className="ms-5 text-warning">Price per adult £12.00</span></label>
               <input class="form-control" type="number" min="0" id="adult" onChange={props.noOfAdultsHandler} required />
             </div>
-            <div class="mb-3">
-              <label class="form-label text-light" for="child">Number of children</label>
+            {(props.certificate == "12A" ?
+              <div class="mb-3">
+              <label class="form-label text-light" for="child">Number of children <span className="ms-5 text-warning">Price per child £7.00</span></label>
               <input class="form-control" type="number" min="0" id="child" onChange={props.noOfChildrenHandler} required />
-            </div>
+              </div>
+            : '')}
             <div class="mb-3">
-              <label class="form-label text-light" for="child">Promo Code <span className="text-warning ms-5">Price will automatically update if valid</span></label>
+              <label class="form-label text-light" for="child">Promo Code</label>
               <input class="form-control" type="input" id="child" onChange={props.concessionsHandler} />
             </div>
             <div class="mb-3">

@@ -26,7 +26,7 @@ const FilmCard = (props) => {
                     <img className="ms-5" src={props.data[0].imageURL} style={{width: "100%", height: "500px"}} alt="No Time To Die Poster" />
                 </div>
                 <div class="col-7">
-                    <h5 className="text-light ms-5">{props.data[0].BBFCRating}</h5>
+                    {(props.data[0].BBFCRating == "12A" ? <h5 className="text-light ms-5">{props.data[0].BBFCRating}</h5> : props.data[0].BBFCRating == "15" ? <h5 className="text-danger ms-5">{props.data[0].BBFCRating}</h5> : <h5 className="text-danger ms-5">{props.data[0].BBFCRating}</h5>) }
                     <h5 className="text-warning ms-5">Synopsis</h5>
                     <p className="text-light ms-5">{props.data[0].synopsis}</p>
                     <p className="text-light ms-5">Director</p>
@@ -35,7 +35,7 @@ const FilmCard = (props) => {
                     <p className="text-white-50 ms-5 me-5 cast">{formattedString}</p>
                     <p className="text-light ms-5">Running time</p>
                     <p className="text-white-50 ms-5 me-5 runtime">{`${props.data[0].runTime} minutes`}</p>
-                    <button class="button-62 center-film-booking"><Link className="text-black-50" to="/booking/no_time_to_die">Get All Times & Tickets</Link></button>
+                    <button class="button-62 center-film-booking"><Link className="text-black-50" to={`/booking/${props.bookingFormURLParam}`}>Get All Times & Tickets</Link></button>
                 </div>
             </div>
         </React.Fragment>
