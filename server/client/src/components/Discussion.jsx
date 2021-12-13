@@ -9,8 +9,8 @@ const Discussion = () => {
   const [data, setData] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState(null);
-  const [username, setUsername] = useState("Test");
-  const [comment, setComment] = useState("Hello");
+  const [username, setUsername] = useState("");
+  const [comment, setComment] = useState("");
 
   const usernameHandler = (e) => {
     setUsername(e.target.value);
@@ -46,26 +46,10 @@ const Discussion = () => {
       console.error(error);
     })
 
-    /*
-    fetch(url, {
-      method: "PUT",
-      header: {
-        "content-type": "application/JSON",
-      },
-      body: JSON.stringify(obj),
-    }).then((response) => {
-      if (response.status !== 201) {
-        console.error(`status: ${response.status}`);
-      } else {
-        console.log(response);
-      }
-    });*/
+    window.location.reload(false);
+
   };
 
-  useEffect(() => {
-    setUsername(username);
-    setComment(comment);
-  });
 
   useEffect(() => {
     setTimeout(() => {
