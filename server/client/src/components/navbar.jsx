@@ -22,9 +22,9 @@ const navbar = () => {
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li class="nav-item"><Link class="dropdown-item" to="/movie/no_time_to_die">No Time To Die</Link></li>
-                                <li class="nav-item"><a class="dropdown-item" href="#">Dune</a></li>
-                                <li class="nav-item"><a class="dropdown-item" href="#">Eternals</a></li>
-                                <li class="nav-item"><a class="dropdown-item" href="#">The Last Duel</a></li>
+                                <li class="nav-item"><Link class="dropdown-item" to="/movie/dune">Dune: Part One</Link></li>
+                                <li class="nav-item"><Link class="dropdown-item" to="/movie/eternals">Eternals</Link></li>
+                                <li class="nav-item"><Link class="dropdown-item" to="/movie/the_last_duel">The Last Duel</Link></li>
                             </ul>
                         </li>
                         <li class="nav-item dropdown">
@@ -32,11 +32,10 @@ const navbar = () => {
                                 Upcoming Releases
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li class="nav-item"><Link class="dropdown-item" to="/NewReleases">View All</Link></li>
-                                <li class="nav-item"><a class="dropdown-item" href="#">Spider - Man: No Way Home</a></li>
-                                <li class="nav-item"><a class="dropdown-item" href="#">The Matrix Resurrections</a></li>
-                                <li class="nav-item"><a class="dropdown-item" href="#">The King's Man</a></li>
-                                <li class="nav-item"><a class="dropdown-item" href="#">The Batman</a></li>
+                                <li class="nav-item"><Link class="dropdown-item" to="/movie/spiderman_no_way_home">Spider-man: No Way Home</Link></li>
+                                <li class="nav-item"><Link class="dropdown-item" to="/movie/the_matrix_resurrections">The Matrix Resurrections</Link></li>
+                                <li class="nav-item"><Link class="dropdown-item" to="/movie/the_kings_man">The King's Man</Link></li>
+                                <li class="nav-item"><Link class="dropdown-item" to="/movie/the_batman">The Batman</Link></li>
                             </ul>
                         </li>
                         <li class="nav-item">
