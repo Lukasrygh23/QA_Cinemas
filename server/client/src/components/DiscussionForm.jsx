@@ -1,3 +1,4 @@
+import "../css/discussionCard.css";
 const DiscussionForm = (props) => {
   const { Thread } = props;
   return (
@@ -14,12 +15,13 @@ const DiscussionForm = (props) => {
             <div>
               <label className="form-label text-light" for="username">
                 {" "}
-                Enter Name:{" "}
+                Enter Name:&#160;{" "}
               </label>
               <input
                 className=""
                 type="text"
                 id="username"
+                placeholder="Username"
                 onChange={props.usernameHandler}
                 required
               />
@@ -27,18 +29,21 @@ const DiscussionForm = (props) => {
             <div>
               <label className="form-label text-light" for="comment">
                 {" "}
-                Enter Comment:{" "}
+                Enter Comment:&#160;{" "}
               </label>
               <input
                 className="form-control"
                 type="text"
                 id="comment"
+                placeholder="Comment"
                 onChange={props.commentHandler}
                 required
               />
             </div>
-
-            <button class="button-62"> Submit Comment</button>
+            <div>
+              <p></p>
+              <button class="button-62"> Submit Comment</button>
+            </div>
           </form>
         </div>
       </div>

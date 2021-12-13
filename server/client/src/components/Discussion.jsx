@@ -28,7 +28,6 @@ const Discussion = () => {
 
   const idHandler = (e) => {
     setId(e.target.value);
-
   };
 
   const threadUsernameHandler = (e) => {
@@ -47,10 +46,9 @@ const Discussion = () => {
     setReviewBody(e.target.value);
   };
 
-
   const handleSubmit = (event, id) => {
     event.preventDefault();
-    
+
     let obj = {
       username: username,
       text: comment,
@@ -61,18 +59,19 @@ const Discussion = () => {
     console.log(obj);
     console.log(url);
 
-    axios.post(url, obj).then((response) => {
-      setIsLoaded(true);
-      console.log(response);
-
-    }).catch((error) => {
-      setError(error);
-      setIsLoaded(true);
-      console.error(error);
-    })
+    axios
+      .post(url, obj)
+      .then((response) => {
+        setIsLoaded(true);
+        console.log(response);
+      })
+      .catch((error) => {
+        setError(error);
+        setIsLoaded(true);
+        console.error(error);
+      });
 
     window.location.reload(false);
-
   };
 
   const newThread = (event) => {
@@ -83,24 +82,23 @@ const Discussion = () => {
       subject: subject,
       rating: rating,
       reviewBody: reviewBody,
-    }
-
+    };
 
     const url = "http://localhost:5000/threadRoutes/create";
-    console.log(obj)
+    console.log(obj);
 
     axios
       .post(url, obj)
       .then((response) => {
-        console.log(response)
-      }).catch((error) => {
+        console.log(response);
+      })
+      .catch((error) => {
         setError(error);
         console.error(error);
-      })
-    
+      });
+
     window.location.reload(false);
   };
-
 
   useEffect(() => {
     setTimeout(() => {
@@ -145,11 +143,22 @@ const Discussion = () => {
           data.map((Thread) => (
             <React.Fragment>
               <DCard Thread={Thread} />
-              <DiscussionForm Thread={Thread} usernameHandler={usernameHandler} commentHandler={commentHandler} handleSubmit={e => handleSubmit(e, Thread._id)} />
+              <DiscussionForm
+                Thread={Thread}
+                usernameHandler={usernameHandler}
+                commentHandler={commentHandler}
+                handleSubmit={(e) => handleSubmit(e, Thread._id)}
+              />
             </React.Fragment>
           ))
         }
-        <DiscussionNewThreadForm usernameHandler={threadUsernameHandler} subjectHandler={subjectHandler} ratingHandler={ratingHandler} commentHandler={threadHandler} newThread={newThread}/>
+        <DiscussionNewThreadForm
+          usernameHandler={threadUsernameHandler}
+          subjectHandler={subjectHandler}
+          ratingHandler={ratingHandler}
+          commentHandler={threadHandler}
+          newThread={newThread}
+        />
       </>
     );
   }
