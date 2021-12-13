@@ -31,7 +31,7 @@ router.get("/getAll", (req, res) => {
 router.get("/getThread/:id", (req, res, next) => {
   const id = req.params.id;
   console.log(id);
-  Thread.find({ id: id }, (error, result) => {
+  Thread.find({ _id: id }, (error, result) => {
     if (error) {
       next(error);
     } else {
@@ -45,7 +45,7 @@ router.get("/getComment/:threadId/:id", (req, res, next) => {
     console.log(req.params.id);
     const threadId = req.params.threadId;
     const commentId = req.params.id;
-    Thread.find({"id":threadId}, {comments: {$elemMatch: {_id: commentId}}}, (error, result) => {
+    Thread.find({"_id":threadId}, {comments: {$elemMatch: {_id: commentId}}}, (error, result) => {
     if (error) {
       next(error);
     } else {
@@ -64,7 +64,7 @@ router.post("/addComment/:thread", (req, res, next) => {
   console.log("Rout Access");
 
   Thread.findOneAndUpdate(
-    { id: threadId },
+    { _id: threadId },
     { $push: { comments: comment } },
     (error, result) => {
       if (error) {
@@ -119,7 +119,7 @@ router.delete("/deleteThread/:threadId", (req, res, next) => {
     const threadId = req.params.threadId;
     console.log(threadId);
 
-    Thread.deleteOne({ id: threadId }, (error, result, next) => {
+    Thread.deleteOne({ _id: threadId }, (error, result, next) => {
         if (error) {
             next(error);
         } else {
