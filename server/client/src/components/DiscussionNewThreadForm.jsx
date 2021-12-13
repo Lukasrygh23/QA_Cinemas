@@ -44,7 +44,7 @@ const DiscussionNewThreadForm = (props) => {
                         min="0"
                         max="10"
                         id="rating"
-                        onChange={props.setRating}
+                        onChange={props.ratingHandler}
                     />
                 </div>
                 <div>
