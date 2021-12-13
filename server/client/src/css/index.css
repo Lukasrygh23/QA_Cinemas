@@ -12,6 +12,10 @@ a:link {
   transition: color 1s;
 }
 
+#navbarHelpDropdown {
+  color: #ffffff;
+}
+
 #logo {
   background-color: transparent;
 }

@@ -4,9 +4,10 @@ table, th, td {
     table-layout: fixed;
 }
 
-h1, h2 {
+h1 {
     color: #ff9a5a;
     transition: color 1s;
+    text-align: center;
 }
 
 td {

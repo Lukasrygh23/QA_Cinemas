@@ -1,7 +1,9 @@
+import './css/openingTimes.css';
+
 const openingTimes = () => {
     return (
         <>
-            <div class="container">
+            <div class="container w-50 mx-auto">
                 <h1>Opening Times</h1>
                 <table class="table table-dark table-striped table-hover">
                     <thead>
@@ -42,7 +44,7 @@ const openingTimes = () => {
                     </tbody>
                 </table>
                 <br></br>
-                <h2>Opening Times during the holidays</h2>
+                <h1>Holiday Hours</h1>
                 <table class="table table-dark table-striped table-hover">
                     <thead>
                         <tr>
