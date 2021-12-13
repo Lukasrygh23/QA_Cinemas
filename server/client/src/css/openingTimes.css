@@ -7,7 +7,6 @@ table, th, td {
 h1, h2 {
     color: #ff9a5a;
     transition: color 1s;
-    text-align: center;
 }
 
 td {

@@ -5,7 +5,7 @@ import BookingNoTimeToDiePage from './BookingNoTimeToDiePage';
 import OpeningTimes from './openingTimes';
 import ScreenListings from './screenListingsPage';
 import AboutPage from './aboutPage';
-import ContactPage from './contactPage';
+import ContactPage from './ContactPage';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import FilmClassificationPage from './FilmClassificationPage';
 import Discussion from "./components/Discussion";
