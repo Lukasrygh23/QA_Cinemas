@@ -46,7 +46,7 @@ const navbar = () => {
                             <Link className="text-light" to="/ScreenListings">Screen Listings</Link>
                         </li>
                         <li class="nav-item dropdown">
-                            <a className="text-light" class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a className="text-light" class="nav-link dropdown-toggle" href="#" id="navbarHelpDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 Help
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">

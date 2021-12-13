@@ -7,6 +7,11 @@ a:link {
   display: inline;
 }
 
+#navbarDropdown {
+  color: #ff9a5a;
+  transition: color 1s;
+}
+
 #logo {
   background-color: transparent;
 }
