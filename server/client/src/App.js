@@ -1,15 +1,14 @@
-import ContactPage from './contactPage';
-import NavBar from "./components/navbar";
-import HomePage from "./homePage";
-import NoTimeToDiePage from "./NoTimeToDiePage";
-import BookingNoTimeToDiePage from "./BookingNoTimeToDiePage";
-import OpeningTimes from "./openingTimes";
-import ScreenListings from "./screenListingsPage";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import ScrollToTop from "./components/ScrollToTop";
-import FilmClassificationPage from "./FilmClassificationPage";
+import NavBar from './components/navbar';
+import HomePage from './homePage';
+import NoTimeToDiePage from './NoTimeToDiePage';
+import BookingNoTimeToDiePage from './BookingNoTimeToDiePage';
+import OpeningTimes from './openingTimes';
+import ScreenListings from './screenListingsPage';
+import AboutPage from './aboutPage';
+import ContactPage from './ContactPage';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import FilmClassificationPage from './FilmClassificationPage';
 import Discussion from "./components/Discussion";
-import AboutPage from "./aboutPage";
 import HowToGetHerePage from './HowToGetHerePage';
 import LocalVenuesPage from "./LocalVenuesPage";
 import DunePage from './DunePage';
@@ -26,6 +25,8 @@ import TheKingsManPage from './TheKingsManPage';
 import BookingTheKingsManPage from './BookingTheKingsMan';
 import TheBatmanPage from './TheBatmanPage';
 import BookingTheBatmanPage from './BookingTheBatman';
+import CommentModeration from "./CommentModeration";
+import ScrollToTop from './components/ScrollToTop';
 
 function App() {
   return (
@@ -107,6 +108,9 @@ function App() {
         </Route>
         <Route path="/LocalVenues">
           <LocalVenuesPage />
+        </Route>
+        <Route path="/secretModBackend">
+          <CommentModeration />
         </Route>
       </Switch>
     </Router>
