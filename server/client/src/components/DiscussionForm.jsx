@@ -1,4 +1,5 @@
 const DiscussionForm = (props) => {
+  const { Thread } = props;
   return (
     <div class="row">
       <h5 className="text-light">Have your say!</h5>
@@ -32,6 +33,18 @@ const DiscussionForm = (props) => {
             id="comment"
             onChange={props.commentHandler}
             required
+          />
+        </div>
+        <div>
+          <label className="form-label text-light" for="id">
+          </label>
+          <input
+            className=""
+            type="text"
+            id="id"
+            onInput={props.idHandler}
+            value={Thread._id}
+            readOnly
           />
         </div>
         <button class="button-62"> Submit Comment</button>

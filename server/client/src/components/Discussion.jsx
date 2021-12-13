@@ -13,6 +13,7 @@ const Discussion = () => {
   //These are for comments.
   const [username, setUsername] = useState("");
   const [comment, setComment] = useState("");
+  const [id, setId] = useState("");
   //These ones are for threads.
   const [threadUsername, setThreadUsername] = useState("");
   const [subject, setSubject] = useState("");
@@ -26,6 +27,10 @@ const Discussion = () => {
   const commentHandler = (e) => {
     setComment(e.target.value);
   };
+
+  const idHandler = (e) => {
+    setId(e.target.value);
+  }
 
   const threadUsernameHandler = (e) => {
     setThreadUsername(e.target.value);
@@ -51,7 +56,8 @@ const Discussion = () => {
       username: username,
       text: comment,
     };
-    const threadId = 1;
+    const threadId = id;
+    console.log(threadId);
     const url = "http://localhost:5000/threadRoutes/addComment/" + threadId;
     console.log(obj);
     console.log(url);
@@ -66,7 +72,7 @@ const Discussion = () => {
       console.error(error);
     })
 
-    window.location.reload(false);
+    //window.location.reload(false);
 
   };
 
@@ -79,6 +85,7 @@ const Discussion = () => {
       rating: rating,
       reviewBody: reviewBody,
     }
+
 
     const url = "http://localhost:5000/threadRoutes/create";
     console.log(obj)
@@ -139,7 +146,7 @@ const Discussion = () => {
           data.map((Thread) => (
             <React.Fragment>
               <DCard Thread={Thread} />
-              <DiscussionForm Thread={Thread} usernameHandler={usernameHandler} commentHandler={commentHandler} handleSubmit={handleSubmit} />
+              <DiscussionForm Thread={Thread} usernameHandler={usernameHandler} commentHandler={commentHandler} idHandler={idHandler} handleSubmit={handleSubmit} />
             </React.Fragment>
           ))
         }
