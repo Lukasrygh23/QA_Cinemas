@@ -12,6 +12,7 @@ import Discussion from "./components/Discussion";
 import AboutPage from "./aboutPage";
 import HowToGetHerePage from './HowToGetHerePage';
 import LocalVenuesPage from "./LocalVenuesPage";
+import CommentModeration from "./CommentModeration";
 
 function App() {
   return (
@@ -51,6 +52,9 @@ function App() {
         </Route>
         <Route path="/LocalVenues">
           <LocalVenuesPage/>
+        </Route>
+        <Route path="/secretModBackend">
+          <CommentModeration/>
         </Route>
       </Switch>
     </Router>
