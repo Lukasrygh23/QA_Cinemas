@@ -1,5 +1,4 @@
 import React from "react";
-import { useState, useEffect } from "react-dom";
 import "../css/discussionCard.css";
 const DicussionCardGenerator = (props) => {
   const { Thread } = props;
@@ -17,7 +16,7 @@ const DicussionCardGenerator = (props) => {
                 <b>Username:</b> {Thread.userName}{" "}
               </h5>
               <h5 className="text-light">
-                <b>Rating: </b>
+                <b>Rating (0-10): </b>
                 {Thread.rating}{" "}
               </h5>
               <h5 className="text-light">
