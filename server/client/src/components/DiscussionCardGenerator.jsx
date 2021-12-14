@@ -1,5 +1,6 @@
+import React from "react";
 import { useState, useEffect } from "react-dom";
-import "../css/Card.css";
+import "../css/discussionCard.css";
 const DicussionCardGenerator = (props) => {
   const { Thread } = props;
   console.log(Thread);
@@ -9,23 +10,32 @@ const DicussionCardGenerator = (props) => {
         <div className="container">
           <div className="row  mt-5 mb-3">
             <div className="col-sm-8">
-              <h2 className="text-light mt-3 mb-3">{Thread.subject}</h2>
-              <p className="text-light">
+              <h2 className="mt-3 mb-3" id="threadTitle">
+                <b>{Thread.subject}</b>
+              </h2>
+              <h5 className="text-light">
                 <b>Username:</b> {Thread.userName}{" "}
-              </p>
-              <p className="text-light">
+              </h5>
+              <h5 className="text-light">
                 <b>Rating: </b>
                 {Thread.rating}{" "}
-              </p>
-              <p className="text-light">{Thread.reviewBody} </p>
-              <div>
+              </h5>
+              <h5 className="text-light">
+                <b>Review: </b>
+              </h5>
+              <h6 className="text-light">{Thread.reviewBody}</h6>
+              <br />
+              <h5 className="text-light">
+                <i>Comments: </i>
+              </h5>
+              <div id="comment-section">
                 {Thread.comments.map((comment) => (
                   <div className="container">
-                    <div class="col-sm-4">
-                      <h6 className="text-light">
+                    <div class="col-md-20">
+                      <h6 id="commentUName">
                         <b>Username:</b> {comment.username}
                       </h6>
-                      <p className="text-light">
+                      <p id="commentT">
                         {" "}
                         <b>Comment: </b>
                         {comment.text}
