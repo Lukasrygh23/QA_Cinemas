@@ -10,7 +10,7 @@ const DicussionCardGenerator = (props) => {
         <div className="container">
           <div className="row  mt-5 mb-3">
             <div className="col-sm-8">
-              <h2 className="text-light mt-3 mb-3">
+              <h2 className="mt-3 mb-3" id="threadTitle">
                 <b>{Thread.subject}</b>
               </h2>
               <h5 className="text-light">

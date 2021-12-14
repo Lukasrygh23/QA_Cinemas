@@ -82,3 +82,7 @@
   font-style: italic;
   color: rgb(146, 147, 147);
 }
+
+#threadTitle {
+  color: rgb(255, 143, 25);
+}
