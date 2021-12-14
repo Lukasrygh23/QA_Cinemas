@@ -41,4 +41,16 @@ router.get("/getById/:id", (req, res, next) => {
   });
 });
 
+router.delete("/deleteById/:id", (req, res, next) => {
+  const id = req.params.id;
+  console.log(req.params.id);
+  Movie.deleteOne({ id: id }, (error, result) => {
+    if (error) {
+      next(error);
+    } else {
+      res.status(204).send(result);
+    }
+  })
+})
+
 module.exports = router;
