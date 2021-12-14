@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-const navbar = () => {
+const navbar = (props) => {
     return (
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
@@ -57,8 +57,8 @@ const navbar = () => {
                         </li>
 
                     </ul>
-                    <form class="d-flex">
-                        <input class="form-control me-2" type="search" placeholder="Search" name="search" aria-label="Search"></input>
+                    <form class="d-flex" onSubmit={props.handleSubmit}>
+                        <input class="form-control me-2" type="search" placeholder="Search Term" name="search" aria-label="Search" onChange={props.handleUserInput}></input>
                     </form>
                 </div>
             </div>

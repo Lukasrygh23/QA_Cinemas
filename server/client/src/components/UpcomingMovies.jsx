@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import '../css/Card.css'
 const UpcomingMovies = (props) => {
 const {movie}=props;
-console.log(movie);
 
     if (movie.newRelease === true) {
         return (

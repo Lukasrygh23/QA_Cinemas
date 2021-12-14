@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from 'react-router-dom';
 
 const FilmCard = (props) => {
-    console.log(props.data[0])
      let formattedString = ""
 
     const formatCastArray = () => {
