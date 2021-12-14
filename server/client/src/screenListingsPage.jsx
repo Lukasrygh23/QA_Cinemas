@@ -19,7 +19,9 @@ const screenListingsPage = () => {
             <br></br>
             <div class="card w-50 mx-auto text-center">
                 <div class="card-body">
-                    <img src="https://s1.ticketm.net/uk/tmimages/venue/maps/uk1/20480s.gif" alt="deluxe screen seating plan" ></img>
+                    <div class="bg-image hover-zoom">
+                        <img src="https://s1.ticketm.net/uk/tmimages/venue/maps/uk1/20480s.gif" alt="deluxe screen seating plan" ></img>
+                    </div>
                     <h5 class="card-title">Deluxe Screen</h5>
                     <p class="card-text">The more expensive option that is worth the extra cash! With reclining seats and huge speakers too! This screen is
                         definitely for those who want an incredible experience and to burn a whole in their wallet!</p>

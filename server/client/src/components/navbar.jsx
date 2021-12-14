@@ -1,10 +1,11 @@
 import { Link } from 'react-router-dom';
+import Logo from '../resources/QA Cinemas.png';
 
 const navbar = () => {
     return (
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container-fluid">
-                <a class="navbar-brand" href="http://www.staggeringbeauty.com/" target="_blank"><img id="logo" src="https://c.tenor.com/sTFc7j1xRJ0AAAAM/doge-dancing-doge.gif" alt="todo clapping gif" width="100" height="100"></img></a>
+                <a class="navbar-brand" href="http://www.staggeringbeauty.com/" target="_blank"><img id="logo" src={Logo} alt="todo clapping gif" width="150" height="150"></img></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -39,7 +40,7 @@ const navbar = () => {
                             </ul>
                         </li>
                         <li class="nav-item">
-                            <Link className="text-light" to="/FilmClassification">Film Classification</Link>
+                            <Link className="text-light" to="/Discussion">Discussion</Link>
                         </li>
                         <li class="nav-item">
                             <Link className="text-light" to="/ScreenListings">Screen Listings</Link>
@@ -53,6 +54,7 @@ const navbar = () => {
                                 <li class="nav-item"><Link class="dropdown-item" to="/Contact">Contact Us</Link></li>
                                 <li class="nav-item"><Link class="dropdown-item" to="/HowToGetHere">Getting Here</Link></li>
                                 <li class="nav-item"><Link class="dropdown-item" to="/LocalVenues">Local Venues</Link></li>
+                                <li class="nav-item"><Link class="dropdown-item" to="/FilmClassification">Film Classification</Link></li>
                             </ul>
                         </li>
 
