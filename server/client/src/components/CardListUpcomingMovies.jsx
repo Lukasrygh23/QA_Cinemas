@@ -21,7 +21,6 @@ const CardListUpcomingMovies = () => {
                 //.then -> once the data is received, do something
                 .then((response) => {
                     setIsLoaded(true);
-                    console.log(response);
                     //use the setData to update the empty array
                     setData(response.data);
                     //the do something is to log the response to the console
@@ -48,7 +47,6 @@ const CardListUpcomingMovies = () => {
         )
 
     } else {
-        console.log(data)
         return (
             //<> -> a fragment, can use <div> instead
             <>

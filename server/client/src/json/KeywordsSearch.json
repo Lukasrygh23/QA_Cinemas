@@ -1,0 +1,43 @@
+[     {
+      "keywords": ["landing", "home", "copyright", "nav", "navigation"],
+      "title" : "Home",
+      "link": "http://localhost:3000/",
+      "description": "QA cinemas homepage"
+    },
+    {
+      "keywords": ["opening", "times", "opening times", "holidays", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday", "christmas", "christmas day", "boxing day", "day", "new years", "eve", "new year day", "new year"],
+      "title" : "Opening Times",
+      "link": "http://localhost:3000/OpeningTimes",
+      "description": "QA cinemas opening times and holiday closures"
+    },
+    {
+      "keywords": ["film", "movie", "no time to die", "no", "time", "to", "die", "bond", "mi6", "cia", "scientist", "daniel craig", "daniel", "craig", "rami malek", "rami", "malek", "lea saydoux", "lea", "saydoux", "cary joji fukunaga", "cary", "joji", "fukunaga"],
+      "title" : "No Time To Die",
+      "link": "http://localhost:3000/movie/no_time_to_die",
+      "description": "Synopsis - In this film, Bond, who has left active service with MI6, is recruited by the CIA to find a kidnapped scientist, which leads to a showdown with a powerful adversary."
+    },
+    {
+      "keywords": ["film", "movie", "no time to die", "booking", "booking no time to die", "film booking", "movie booking", "book film", "book movie", "book", "no", "time", "to", "die", "bond", "mi6", "cia", "scientist", "daniel craig", "daniel", "craig", "rami malek", "rami", "malek", "lea saydoux", "lea", "saydoux", "cary joji fukunaga", "cary", "joji", "fukunaga"],
+      "title" : "Book No Time To Die",
+      "link": "http://localhost:3000/booking/no_time_to_die",
+      "description": "Book your seats to watch No Time To Die"
+    },
+    {
+      "keywords": ["film", "movie", "dune: part one", "dune part one", "dune", "part", "part one", "caladan", "dennis villeneuve", "dennis", "villeneuve", "timothee chalamet", "timothee", "chalamet", "zendaya", "oscar isaac", "oscar", "isaac"],
+      "title" : "Dune: Part One",
+      "link": "http://localhost:3000/movie/dune",
+      "description": "Synopsis - Duke Leto of House Atreides, ruler of the ocean planet Caladan, is assigned by the Padishah Emperor Shaddam Corrino IV to replace House Harkonnen as fief rulers of Arrakis. Arrakis is a harsh desert planet and the only source of spice, a valuable substance that bestows its users heightened vitality and expanded consciousness. It is critical for interstellar travel as it allows Spacing Guild Navigators to use a limited form of prescience to safely navigate interstellar space. In reality, Shaddam intends to have House Harkonnen stage a coup to retake the planet with aid of the Emperor's Sardaukar troops, eradicating House Atreides, whose influence threatens Shaddam's control. Leto is apprehensive but sees the political advantages of controlling the spice planet and forming an alliance with its native population, skilled fighters known as the Fremen."
+    },
+    {
+      "keywords": ["film", "movie", "eternals", "immortal", "alien", "marvel", "mcu", "superheroes", "superhero", "chloe zhao", "chloe", "zhao", "richard madden", "richard", "madden", "kit harington", "kit", "harington", "angelina jolie", "angelina", "jolie"],
+      "title" : "Eternals",
+      "link": "http://localhost:3000/movie/eternals",
+      "description": "Synopsis - In the film, the Eternals, an immortal alien race, emerge from hiding after thousands of years to protect Earth from their ancient counterparts, the Deviants."
+    },
+    {
+      "keywords": ["film", "movie", "the last duel", "last", "duel", "ridley scott", "ridley", "scott", "medieval", "france", "matt damon", "matt", "damon", "adam driver", "adam", "driver", "jodie comer", "jodie", "comer"],
+      "title" : "The Last Duel",
+      "link": "http://localhost:3000/movie/the_last_duel",
+      "description": "Synopsis -Set in medieval France, the film stars Damon as Jean de Carrouges, a knight who challenges his former friend, squire Jacques Le Gris (Adam Driver) to a judicial duel after Jean's wife, Marguerite (Jodie Comer), accuses Jacques of raping her. The events leading up to the duel are divided into three distinct chapters, reflecting the contradictory perspectives of the three main characters. Affleck also stars in a supporting role as Count Pierre d'Alençon."
+    }
+]
