@@ -91,7 +91,7 @@ describe("Thread Routes", () => {
   it("Get Thread By ID", (done) => {
     chai
       .request(app)
-      .get("/threadRoutes/getThread/61b1dba3dc4eb1a379f720f3")
+      .get(`/threadRoutes/getThread/${tDeleteThread._id}`)
       .end((err, res) => {
         if (err) {
           done(err);
@@ -134,35 +134,28 @@ describe("Thread Routes", () => {
       });
   });
 
-  // it("Get Comment by id", (done) => {
-  //   chai
-  //     .request(app)
-  //     .get(
-  //       "/threadRoutes/getComment/61b1dba3dc4eb1a379f720f3/61b1dba3dc4eb1a379f720f4"
-  //     )
-  //     .end((err, res) => {
-  //       if (err) {
-  //         done(err);
-  //       }
-  //       expect(err).to.be.null;
-  //       expect(res).to.not.be.null;
-  //       expect(res).to.not.be.undefined;
-  //       const body = res.body;
-  //       console.log("=====");
-  //       console.log(res);
-  //       console.log(body);
-  //       console.log("=====")
+  it("Get Comment by id", (done) => {
+    chai
+      .request(app)
+      .get(`/threadRoutes/getComment/${tDeleteThread._id}/${testComment._id}`)
+      .end((err, res) => {
+        if (err) {
+          done(err);
+        }
+        expect(err).to.be.null;
+        expect(res).to.not.be.null;
+        expect(res).to.not.be.undefined;
+        const body = res.body;
 
-  //       //  body.comments.map((Comment) => {
-  //       //    expect(Comment).to.be.a("object");
-  //       //  })
-
-  //       // expect(body).to.be.a("object");
-  //       // expect(body).to.contain.key("username");
-  //       // expect(body).to.contain.key("text")
-  //       done();
-  //     });
-  // });
+        body.map((Comment) => {
+          expect(Comment).to.be.a("Object");
+          expect(body).to.be.a("Array");
+          expect(body).to.contain.key("username");
+          expect(body).to.contain.key("text");
+        });
+        done();
+      });
+  });
 
   it("Delete Comment by ID", (done) => {
     chai
