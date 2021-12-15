@@ -1,0 +1,151 @@
+[     {
+      "keywords": ["landing", "home", "copyright", "nav", "navigation"],
+      "title" : "Home",
+      "link": "http://localhost:3000/",
+      "description": "QA cinemas homepage"
+    },
+    {
+      "keywords": ["opening", "times", "opening times", "holidays", "monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday", "christmas", "christmas day", "boxing day", "day", "new years", "eve", "new year day", "new year"],
+      "title" : "Opening Times",
+      "link": "http://localhost:3000/OpeningTimes",
+      "description": "QA cinemas opening times and holiday closures"
+    },
+    {
+      "keywords": ["film", "movie", "no time to die", "no", "time", "to", "die", "james bond", "james", "bond", "mi6", "cia", "007", "spy", "scientist", "daniel craig", "daniel", "craig", "rami malek", "rami", "malek", "lea saydoux", "lea", "saydoux", "cary joji fukunaga", "cary", "joji", "fukunaga"],
+      "title" : "No Time To Die",
+      "link": "http://localhost:3000/movie/no_time_to_die",
+      "description": "Synopsis - In this film, Bond, who has left active service with MI6, is recruited by the CIA to find a kidnapped scientist, which leads to a showdown with a powerful adversary."
+    },
+    {
+      "keywords": ["film", "movie", "no time to die", "booking", "book no time to die", "book james bond", "book bond", "film booking", "movie booking", "book film", "book movie", "book", "no", "time", "to", "die", "james bond", "james", "bond", "007", "mi6", "cia", "spy", "scientist", "daniel craig", "daniel", "craig", "rami malek", "rami", "malek", "lea saydoux", "lea", "saydoux", "cary joji fukunaga", "cary", "joji", "fukunaga"],
+      "title" : "Book No Time To Die",
+      "link": "http://localhost:3000/booking/no_time_to_die",
+      "description": "Book your seats to watch No Time To Die"
+    },
+    {
+      "keywords": ["film", "movie", "dune: part one", "dune part one", "dune", "part", "part one", "caladan", "dennis villeneuve", "dennis", "villeneuve", "timothee chalamet", "timothee", "chalamet", "zendaya", "oscar isaac", "oscar", "isaac"],
+      "title" : "Dune: Part One",
+      "link": "http://localhost:3000/movie/dune",
+      "description": "Synopsis - Duke Leto of House Atreides, ruler of the ocean planet Caladan, is assigned by the Padishah Emperor Shaddam Corrino IV to replace House Harkonnen as fief rulers of Arrakis. Arrakis is a harsh desert planet and the only source of spice, a valuable substance that bestows its users heightened vitality and expanded consciousness. It is critical for interstellar travel as it allows Spacing Guild Navigators to use a limited form of prescience to safely navigate interstellar space. In reality, Shaddam intends to have House Harkonnen stage a coup to retake the planet with aid of the Emperor's Sardaukar troops, eradicating House Atreides, whose influence threatens Shaddam's control. Leto is apprehensive but sees the political advantages of controlling the spice planet and forming an alliance with its native population, skilled fighters known as the Fremen."
+    },
+    {
+      "keywords": ["film", "movie", "dune: part one", "booking","book dune: part one", "book dune part one", "book dune", "film booking", "movie booking", "book film", "book movie", "book", "dune", "part", "part one", "caladan", "dennis villeneuve", "dennis", "villeneuve", "timothee chalamet", "timothee", "chalamet", "zendaya", "oscar isaac", "oscar", "isaac"],
+      "title" : "Book Dune: Part One",
+      "link": "http://localhost:3000/booking/dune",
+      "description": "Book your seats to watch Dune: Part One"
+    },
+    {
+      "keywords": ["film", "movie", "eternals", "immortal", "alien", "marvel", "mcu", "superheroes", "superhero", "comic book", "comic", "chloe zhao", "chloe", "zhao", "richard madden", "richard", "madden", "kit harington", "kit", "harington", "angelina jolie", "angelina", "jolie"],
+      "title" : "Eternals",
+      "link": "http://localhost:3000/movie/eternals",
+      "description": "Synopsis - In the film, the Eternals, an immortal alien race, emerge from hiding after thousands of years to protect Earth from their ancient counterparts, the Deviants."
+    },
+    {
+      "keywords": ["film", "movie", "eternals", "booking", "book eternals", "film booking", "movie booking", "book film", "book movie", "book", "immortal", "alien", "marvel", "mcu", "superheroes", "superhero", "comic book", "comic", "chloe zhao", "chloe", "zhao", "richard madden", "richard", "madden", "kit harington", "kit", "harington", "angelina jolie", "angelina", "jolie"],
+      "title" : "Book Eternals",
+      "link": "http://localhost:3000/booking/eternals",
+      "description": "Book your seats to watch Eternals"
+    },
+    {
+      "keywords": ["film", "movie", "the last duel", "last", "duel", "ridley scott", "ridley", "scott", "medieval", "france", "matt damon", "matt", "damon", "adam driver", "adam", "driver", "jodie comer", "jodie", "comer"],
+      "title" : "The Last Duel",
+      "link": "http://localhost:3000/movie/the_last_duel",
+      "description": "Synopsis - Set in medieval France, the film stars Damon as Jean de Carrouges, a knight who challenges his former friend, squire Jacques Le Gris (Adam Driver) to a judicial duel after Jean's wife, Marguerite (Jodie Comer), accuses Jacques of raping her. The events leading up to the duel are divided into three distinct chapters, reflecting the contradictory perspectives of the three main characters. Affleck also stars in a supporting role as Count Pierre d'Alençon."
+    },
+    {
+      "keywords": ["film", "movie", "the last duel", "booking", "book the last duel", "book last duel", "film booking", "movie booking", "book film", "book movie", "book", "last", "duel", "ridley scott", "ridley", "scott", "medieval", "france", "matt damon", "matt", "damon", "adam driver", "adam", "driver", "jodie comer", "jodie", "comer"],
+      "title" : "Book The Last Duel",
+      "link": "http://localhost:3000/booking/the_last_duel",
+      "description": "Book your seats to watch The Last Duel"
+    },
+        {
+      "keywords": ["film", "movie", "spider-man: no way home", "spiderman", "spider-man", "no way home", "no", "way", "home", "marvel", "mcu", "superheroes", "superhero", "peter parker", "peter", "parker", "multiverse", "comic book", "comic", "doctor strange", "doctor", "strange", "tom holland", "tom", "holland", "zendaya", "benedict cumberbatch", "benedict", "cumberbatch"],
+      "title" : "Spider-man: No Way Home",
+      "link": "http://localhost:3000/movie/spiderman_no_way_home",
+      "description": "Synopsis - In the film, Parker asks Dr. Stephen Strange (Cumberbatch) to help make his identity as Spider-Man a secret again with magic, which leads to the multiverse breaking open and allowing supervillains from alternate realities to enter Parker's universe."
+    },
+    {
+      "keywords": ["film", "movie", "spider-man: no way home", "booking", "book spider-man: no way home", "book spiderman no way home", "book spiderman", "book no way home", "film booking", "movie booking", "book film", "book movie", "book", "spiderman", "spider-man", "no way home", "no", "way", "home", "marvel", "mcu", "comic book", "comic", "superheroes", "superhero", "peter parker", "peter", "parker", "multiverse", "doctor strange", "doctor", "strange", "tom holland", "tom", "holland", "zendaya", "benedict cumberbatch", "benedict", "cumberbatch"],
+      "title" : "Book Spider-man: No Way Home",
+      "link": "http://localhost:3000/booking/spiderman_no_way_home",
+      "description": "Book your seats to watch Spider-man: No Way Home"
+    },
+    {
+      "keywords": ["film", "movie", "the matrix resurrections", "matrix resurrections", "the matrix", "matrix", "resurrections", "neo", "trinity", "blue pill", "sequel", "keanu reeves", "keanu", "reeves", "carrie-anne morris", "carrie-anne", "morris", "lana wachowski", "lana", "wachowski" ],
+      "title" : "The Matrix Resurrections",
+      "link": "http://localhost:3000/movie/the_matrix_resurrections",
+      "description": "Synopsis - Twenty years after the events of The Matrix Revolutions, Neo lives a seemingly ordinary life under his original identity as Thomas A. Anderson in San Francisco, with a therapist who prescribes him blue pills to counteract the strange and unnatural things he occasionally glimpses."
+    },
+    {
+      "keywords": ["film", "movie", "the matrix resurrections", "booking", "book the matrix resurrections", "book matrix", "book matrix resurrections", "film booking", "movie booking", "book film", "book movie", "book", "matrix resurrections", "the matrix", "matrix", "resurrections", "neo", "trinity", "blue pill", "sequel", "keanu reeves", "keanu", "reeves", "carrie-anne morris", "carrie-anne", "morris", "lana wachowski", "lana", "wachowski"],
+      "title" : "Book The Matrix Resurrections",
+      "link": "http://localhost:3000/booking/the_matrix_resurrections",
+      "description": "Book your seats to watch The Matrix Resurrections"
+    },
+    {
+      "keywords": ["film", "movie", "the king's man", "the kings man", "kingsman", "spy", "resurrections", "prequel", "comic book", "comic", "matthew vaughn", "matthew", "vaughn", "raplh fiennes", "raplh", "fiennes", "gemma arteton", "gemma", "arteton"],
+      "title" : "The King's Man",
+      "link": "http://localhost:3000/movie/the_kings_man",
+      "description": "Synopsis - As a collection of history's worst tyrants and criminal masterminds gather to plot a war to wipe out millions, one man and his protégé must race against time to stop them."
+    },
+    {
+      "keywords": ["film", "movie", "the king's man", "booking", "book the king's man", "book the kingsman", "book kingsman", "film booking", "movie booking", "book film", "book movie", "book", "the kings man", "kingsman", "spy", "comic book", "comic", "prequel", "matthew vaughn", "matthew", "vaughn", "raplh fiennes", "raplh", "fiennes", "gemma arteton", "gemma", "arteton"],
+      "title" : "Book The King's Man",
+      "link": "http://localhost:3000/booking/the_kings_man",
+      "description": "Book your seats to watch The King's Man"
+    },
+    {
+      "keywords": ["film", "movie", "the batman", "batman", "bat", "superhero", "superheroes", "DC", "DCCU", "comic book", "comic", "gotham", "riddler", "bruce wayne", "bruce", "wayne", "alfred", "butler", "matt reeves", "matt", "reeves", "robert pattinson", "robert", "pattinson"],
+      "title" : "The Batman",
+      "link": "http://localhost:3000/movie/the_batman",
+      "description": "Synopsis - During his second year of fighting crime, Batman pursues the Riddler, a serial killer who targets elite Gotham City citizens. He uncovers corruption that connects to his own family during the investigation, and is forced to make new allies to catch the Riddler and bring the corrupt to justice."
+    },
+    {
+      "keywords": ["film", "movie", "the batman", "booking", "book the batman", "book batman", "film booking", "movie booking", "book film", "book movie", "book", "batman", "bat", "superhero", "superheroes", "DC", "DCCU", "comic book", "comic", "gotham", "riddler", "bruce wayne", "bruce", "wayne", "alfred", "butler", "matt reeves", "matt", "reeves", "robert pattinson", "robert", "pattinson"],
+      "title" : "Book The Batman",
+      "link": "http://localhost:3000/booking/the_batman",
+      "description": "Book your seats to watch The Batman"
+    },
+    {
+      "keywords": ["ratings", "reviews", "review", "rating", "discussions", "discussion", "discuss", "comment", "comments", "thread", "forums", "forum"],
+      "title" : "Ratings and Discussions",
+      "link": "http://localhost:3000/Discussion",
+      "description": "Have your say on our discussions page"
+    },
+    {
+      "keywords": ["screens", "screen", "screening", "cinema screens", "deluxe screen", "standard screen", "theatre", "seating", "seats"],
+      "title" : "Our Screens",
+      "link": "http://localhost:3000/ScreenListings",
+      "description": "Information about our screens"
+    },
+    {
+      "keywords": ["help", "about", "about us", "qa cinemas", "qa limited", "learn more", "team", "socials", "social", "contact us", "contact"],
+      "title" : "About Us",
+      "link": "http://localhost:3000/About",
+      "description": "Find more information about QA cinemas and the team"
+    },
+    {
+      "keywords": ["help", "contact", "contact us", "email", "write to us", "call us", "address"],
+      "title" : "Contact Us",
+      "link": "http://localhost:3000/Contact",
+      "description": "Find contact information on our contact page"
+    },
+    {
+      "keywords": ["help", "film classification", "classification", "certificate", "age rating", "movie restrictions", "film restrictions", "restrictions", "12a", "15", "18", "PG", "U"],
+      "title" : "Film Classification",
+      "link": "http://localhost:3000/FilmClassification",
+      "description": "Classification is the process of giving age ratings and content advice to films and other audiovisual content to help children and families choose what’s right for them and avoid what’s not. Recommendations are made by Compliance Officers based on the BBFC’s published Guidelines."
+    },
+    {
+      "keywords": ["help", "getting here", "google maps", "map", "how to get here", "location", "locate us", "travel", "finding us", "find us", "manchester", "qa cinemas", "parking", "oxford street"],
+      "title" : "Getting Here",
+      "link": "http://localhost:3000/HowToGetHere",
+      "description": "The cinema is located across the road from the Great Bridgewater Street bus stop and a five minute walk from Manchester Oxford Street Train Station."
+    },
+    {
+      "keywords": ["help", "local venues", "venues", "things to do", "map", "bundobust", "the palace theatre", "palace theatre", "manchester", "oxford street", "promotions", "planning", "plan"],
+      "title" : "Local Venues",
+      "link": "http://localhost:3000/LocalVenues",
+      "description": "Things to do around QA cinemas"
+    }
+]

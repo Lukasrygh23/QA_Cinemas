@@ -5,12 +5,16 @@ import useVideos from './hooks/useVideos';
 import FilmCard from '../src/components/FilmCard'
 
 const NoTimeToDiePage = () => {
-    const bookingFormURLParam = 'no_time_to_die'
     const [selectedVideo, setSelectedVideo] = useState(null);
     const [videos, search] = useVideos('No Time To Die Trailer');
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(true)
     const [videoLoading, setVideoLoading] = useState(true)
+    const bookingFormURLParam = 'no_time_to_die'
+    const screen = "Deluxe Screen"
+    const showtime1 = "15:15 PM"
+    const showtime2 = "18:45 PM"
+    const showtime3 = "22:30 PM"
 
     const getData = async () => {
         const res = await axios.get(`http://localhost:5000/movieRoutes/getById/1`)
@@ -33,7 +37,7 @@ const NoTimeToDiePage = () => {
     return (
         <div>
             <VideoDetail video={selectedVideo} />
-            <FilmCard data={data} bookingFormURLParam={bookingFormURLParam} />
+            <FilmCard data={data} bookingFormURLParam={bookingFormURLParam} screen={screen} showtime1={showtime1} showtime2={showtime2} showtime3={showtime3} />
         </div>
     );
     }

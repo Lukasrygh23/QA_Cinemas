@@ -4,6 +4,7 @@ import axios from "axios";
 import DCard from "./DiscussionCardGenerator";
 import DiscussionForm from "./DiscussionForm";
 import DiscussionNewThreadForm from "./DiscussionNewThreadForm";
+// const filter = new Filter();
 const Discussion = () => {
   const [data, setData] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
@@ -17,6 +18,10 @@ const Discussion = () => {
   const [subject, setSubject] = useState("");
   const [rating, setRating] = useState();
   const [reviewBody, setReviewBody] = useState();
+  const Filter = require("bad-words");
+  const filter = new Filter({ placeholder: "x" });
+  const htmlWords = ["html", "script"];
+  filter.addWords(...htmlWords);
 
   const usernameHandler = (e) => {
     setUsername(e.target.value);
@@ -50,9 +55,10 @@ const Discussion = () => {
     event.preventDefault();
 
     let obj = {
-      username: username,
-      text: comment,
+      username: filter.clean(username),
+      text: filter.clean(comment),
     };
+
     const threadId = id;
     console.log(threadId);
     const url = "http://localhost:5000/threadRoutes/addComment/" + threadId;
@@ -78,10 +84,10 @@ const Discussion = () => {
     event.preventDefault();
 
     let obj = {
-      userName: threadUsername,
-      subject: subject,
-      rating: rating,
-      reviewBody: reviewBody,
+      userName: filter.clean(threadUsername),
+      subject: filter.clean(subject),
+      rating: filter.clean(rating),
+      reviewBody: filter.clean(reviewBody),
     };
 
     const url = "http://localhost:5000/threadRoutes/create";

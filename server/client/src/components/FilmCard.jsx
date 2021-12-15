@@ -1,8 +1,8 @@
 import React from "react";
 import { Link } from 'react-router-dom';
+import '../css/filmCard.css'
 
 const FilmCard = (props) => {
-    console.log(props.data[0])
      let formattedString = ""
 
     const formatCastArray = () => {
@@ -34,7 +34,10 @@ const FilmCard = (props) => {
                     <p className="text-light ms-5">Cast</p>
                     <p className="text-white-50 ms-5 me-5 cast">{formattedString}</p>
                     <p className="text-light ms-5">Running time</p>
-                    <p className="text-white-50 ms-5 me-5 runtime">{`${props.data[0].runTime} minutes`}</p>
+                    {props.data[0].runTime !== 0 ? <p className="text-white-50 ms-5 me-5 runtime">{props.data[0].runTime} minutes</p> : <p className="text-white-50 ms-5 me-5 runtime">TBC</p>}
+                    <p className="text-light ms-5">{props.screen}</p>
+                    <p className="text-white-50 ms-5 upcoming">Upcoming showings</p>
+                    <p id="showtimesContainer" className="text-light ms-5 showtimes"> <span className="">{props.showtime1 }</span> <span className="ms-3">{props.showtime2 }</span><span className="ms-3">{props.showtime3}</span></p>
                     <button class="button-62 center-film-booking"><Link className="text-black-50" to={`/booking/${props.bookingFormURLParam}`}>Get All Times & Tickets</Link></button>
                 </div>
             </div>

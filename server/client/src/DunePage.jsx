@@ -5,12 +5,16 @@ import useVideos from './hooks/useVideos';
 import FilmCard from '../src/components/FilmCard'
 
 const DunePage = () => {
-    const bookingFormURLParam = 'dune'
     const [selectedVideo, setSelectedVideo] = useState(null);
     const [videos, search] = useVideos('Dune Trailer');
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(true)
     const [videoLoading, setVideoLoading] = useState(true)
+    const bookingFormURLParam = 'dune'
+    const screen = "Deluxe Screen"
+    const showtime1 = "06:00 AM"
+    const showtime2 = "09:00 AM"
+    const showtime3 = "12:00 PM"
 
     const getData = async () => {
         const res = await axios.get(`http://localhost:5000/movieRoutes/getById/3`)
@@ -33,7 +37,7 @@ const DunePage = () => {
     return (
         <div>
             <VideoDetail video={selectedVideo} />
-            <FilmCard data={data} bookingFormURLParam={bookingFormURLParam} />
+            <FilmCard data={data} bookingFormURLParam={bookingFormURLParam} screen={screen} showtime1={showtime1} showtime2={showtime2} showtime3={showtime3} />
         </div>
     );
     }

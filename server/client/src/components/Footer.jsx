@@ -43,7 +43,6 @@ const Footer = () => {
                         &copy;{"2021"} Team Mystic | All rights reserved
                     </p>
                 </div>
-
             </div>
         </div>
     )

@@ -4,9 +4,9 @@ import StripeCheckout from 'react-stripe-checkout';
 import './css/BookingPage.css'
 
 const BookingTheKingsManPage = () => {
-    const time1 = "06:00"
-    const time2 = "09:00"
-    const time3 = "12:00"
+    const time1 = "06:00 AM"
+    const time2 = "09:00 AM"
+    const time3 = "12:00 PM"
     const startDate = "2022-01-01"
     const endDate = "2022-01-31"
     const movie = "The King's Man"
