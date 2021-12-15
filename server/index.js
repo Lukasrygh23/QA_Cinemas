@@ -59,3 +59,5 @@ app.get("/movieRoutes/getAll", cors(), function (req, res, next) {
 // PORT
 PORT = 5000 || process.env.PORT;
 app.listen(PORT, console.log(`listening on port: ${PORT}`));
+
+module.exports = app;

@@ -12,7 +12,7 @@ const app = require('../index');
 describe('Testing the movie Route', () => {
 
     //Test Objects
-    const createMovie = new Movie({
+    /**const createMovie = new Movie({
         movieTitle: "How to Test",
         id: 20,
         runTime: 250,
@@ -29,7 +29,7 @@ describe('Testing the movie Route', () => {
         chai.request(app).post("/movieRoutes/create").send(createMovie).end(() => {
             done();
         });
-    });
+    });*/
 
     //test CREATE
 
@@ -46,15 +46,18 @@ describe('Testing the movie Route', () => {
                 expect(body).to.not.be.null;
 
                 body.map((movie) => {
-                    expect(movie).to.be.a.to("object");
+                    expect(movie).to.be.a("object");
                     //Iterate through each of the major fields.
-                    expect(movie).to.contain.keys("movieTitle", "id", "runTime", "BBFCRating", "criticrating", "director", "cast", "synopsis", "imageURL", "newRelease", "screenings", "releaseDate");
+                    expect(movie).to.contain.keys("movieTitle", "id", "runTime", "BBFCRating", "criticRating", "director", "cast", "synopsis", "imageURL", "newRelease", "screenings", "releaseDate");
                     
                     //And then check to see what's in them.
                     expect(movie.id).to.be.a("number");
                     expect(movie.movieTitle).to.be.a("string");
                     expect(movie.runTime).to.be.a("number");
                     expect(movie.BBFCRating).to.be.a("string");
+                    expect(movie.criticRating).to.be.a("number");
+                    expect(movie.director).to.be.a("string");
+                    expect(movie.cast).to.be.a("schema");
 
                 });
                 done();
@@ -63,10 +66,10 @@ describe('Testing the movie Route', () => {
 
 
 
-    after((done) => {
+    /**after((done) => {
         chai.request(app).post("/movieRoutes/deleteById/20").end(() => {
             done();
         })
-    });
+    });**/
 
 })
