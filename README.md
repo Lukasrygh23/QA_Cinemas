@@ -47,7 +47,11 @@ Recommended browser for use, development and testing https://www.google.co.uk/ch
 
 To test the application, type `npm run test` in the command line
 
-This will run the Selenium tests (see below for details), unit tests and the integration test files (see below for details).
+This will run the Mocha and Chai tests (see below for details)
+
+To test check the coverage of the tests, type `npm run coverage` in the command line
+
+This will utilise the Istanbul testing framework and will display the percentage of covered units.
 
 ### Unit Tests
 
@@ -57,16 +61,6 @@ Unit tests have been written to cover the following file types:
 
 1. Components
 2. Routes
-
-### Integration Tests
-
-Integration tests have been written using the Chai framework, the purpose of which is to test the functioning of the software when modules are combined.
-
-Integration tests have been written to test how the controller interacts with the corresponding service and repo files.
-
-### Front-end Tests
-
-Tests have been written using the selenium webdriver to test a range of front end (navigation-focused) user stories
 
 ## Built With
 
