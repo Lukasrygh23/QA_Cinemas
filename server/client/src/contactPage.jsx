@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
 import './css/contactPage.css';
+//Careful with names.
 
 const ContactPage = () => {
 
