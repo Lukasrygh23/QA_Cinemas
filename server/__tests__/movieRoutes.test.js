@@ -7,7 +7,6 @@ const { Movie } = require("../persistence/movie.js");
 chai.use(chaiHttp);
 
 const app = require('../index');
-const chaiApp = chai.request(app).keepOpen();
 
 
 describe('Testing the movie Route', () => {
@@ -106,21 +105,22 @@ describe('Testing the movie Route', () => {
                 expect(res).to.not.be.undefined;
                 expect(res).to.have.status(201);
                 expect(res).to.have.property('text');
+
                 done();
         })
     })
 
 
-
     after((done) => {
-        console.log("tests done");
-    /*    chai.request(app).delete("/movieRoutes/deleteById/20").end(() => {
+        chai.request(app).delete("http://localhost:5000/movieRoutes/deleteById/20").end(() => {
             console.log("Delete request for movie ID 20.");
-        })*/
+        })
         chai.request(app).delete("/movieRoutes/deleteById/21").end(() => {
             console.log("Delete request for movie ID 21.");
+            done();
         })
-        done();
+
+
     });
 
 })
