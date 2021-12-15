@@ -103,8 +103,7 @@ const aboutPage = () => {
                     and sprint backlog was completed, we split the team into front - end and back - end development, depending on each team member's strength.
                     <br></br>
                     <br></br>
-                    From there,
-                    the tasks were split into who was comfortable in doing what (i.e. the more complex tasks were assigned to those most comfortable). Splitting the workload
+                    From there, the tasks were split into who was comfortable in doing what (i.e. the more complex tasks were assigned to those most comfortable). Splitting the workload
                     as such meant that each member can work efficiently so as to create the MVP by the end of the first sprint. Additionally, we can easily contact each other
                     for any help in debugging or opinions in how the page or component should be formatted. </p>
             </div>
