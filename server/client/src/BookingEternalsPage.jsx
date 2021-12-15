@@ -4,9 +4,9 @@ import StripeCheckout from 'react-stripe-checkout';
 import './css/BookingPage.css'
 
 const BookingEternalsPage = () => {
-    const time1 = "15:15"
-    const time2 = "18:45"
-    const time3 = "22:30"
+    const time1 = "15:15 PM"
+    const time2 = "18:45 PM"
+    const time3 = "22:30 PM"
     const startDate = "2021-12-17"
     const endDate = "2021-12-23"
     const movie = "Eternals"

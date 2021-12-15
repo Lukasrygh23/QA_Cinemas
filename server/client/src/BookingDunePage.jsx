@@ -4,9 +4,9 @@ import StripeCheckout from 'react-stripe-checkout';
 import './css/BookingPage.css'
 
 const BookingDunePage = () => {
-    const time1 = "06:00"
-    const time2 = "09:00"
-    const time3 = "12:00"
+    const time1 = "06:00 AM"
+    const time2 = "09:00 AM"
+    const time3 = "12:00 PM"
     const startDate = "2021-12-17"
     const endDate = "2021-12-23"
     const movie = "Dune: Part One"
