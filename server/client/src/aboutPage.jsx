@@ -11,7 +11,8 @@ const aboutPage = () => {
                     a wide range of content, from the highly anticipated blockbusters to the very niche films that make no sense, but
                     are magically somehow award worthy. Our branches around the country have standard and deluxe screens, all
                     of which project films at 4K High Definition. We also offer more than just popcorn and soft drinks.
-                    Our Manchester branch is situated in an area with many restaurants and cafes, which are perfect for </p>
+                    Our Manchester branch is situated in an area with many restaurants and cafes, which are perfect for our customers
+                    to go to after the cinema!.</p>
                 <div class="accordion w-50 mx-auto" id="accordionExample">
                     <div class="accordion-item">
                         <h2 class="accordion-header" id="headingOne">
@@ -50,7 +51,7 @@ const aboutPage = () => {
                         </h2>
                         <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
                             <div class="accordion-body">
-                                <h4>Click below to look at our socials</h4>
+                                <h4>Follow us!</h4>
                                 <ul>
                                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-twitter" viewBox="0 0 16 16">
                                         <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z" />
@@ -86,6 +87,26 @@ const aboutPage = () => {
                         </div>
                     </div>
                 </div>
+                <h1 className="mt-5 mb-5">Scrum Description</h1>
+                <h3>What is Scrum?</h3>
+                <p className="text-light">Scrum is a framework that helps teams create and deliver products while solving any complex problems they come across.
+                    All the work is done in time - limited events (ranging between one week to one month). There will be as many sprints as required until the
+                    requirements meet the MVP (Minimum Viable Product - where the product's features are met well enough for its customers).  Before starting each
+                    sprint, the team adds tasks and user stories to the 'product backlog'. From there, some of the tasks and user stories are added to the 'sprint
+                    backlog', all of which should be completed by the end of the sprint. All the tasks are prioritised using the MoSCoW methodology (Must have, Should
+                    have, Could have and Won't have). Click <a href="https://www.scrum.org/resources/what-is-scrum" className="text-primary" target="_blank">here</a> to learn more about Scrum.
+                </p>
+                <h3>How we used Scrum</h3>
+                <p className="text-light">(Refer to the tabs above for everyone's roles). We planned for two sprints, with each one lasting 5 days (Monday to Friday).
+                    The expected result by the end of our first sprint was to fulfil all the requirements for MVP (i.e. functionality, features etc) and the second sprint
+                    is expected to be for testing and refining the website further (e.g. fixing the formatting, considering adding on non - MVP features etc). Once the product
+                    and sprint backlog was completed, we split the team into front - end and back - end development, depending on each team member's strength.
+                    <br></br>
+                    <br></br>
+                    From there,
+                    the tasks were split into who was comfortable in doing what (i.e. the more complex tasks were assigned to those most comfortable). Splitting the workload
+                    as such meant that each member can work efficiently so as to create the MVP by the end of the first sprint. Additionally, we can easily contact each other
+                    for any help in debugging or opinions in how the page or component should be formatted. </p>
             </div>
         </>
     );
