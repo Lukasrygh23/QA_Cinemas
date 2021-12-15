@@ -1,5 +1,7 @@
 import NavBar from './components/navbar';
 import HomePage from './homePage';
+import NotFound from './NotFound';
+import Footer from './components/Footer';
 import NoTimeToDiePage from './NoTimeToDiePage';
 import BookingNoTimeToDiePage from './BookingNoTimeToDiePage';
 import OpeningTimes from './openingTimes';
@@ -32,6 +34,7 @@ import SearchPage from './SearchPage';
 import data from './json/KeywordsSearch.json'
 
 function App() {
+
   const [userInput, setUserInput] = useState('')
   const [searchTerm, setSearchTerm] = useState('')
   const [awaitUserInput, setAwaitUserInput] = useState(true)
@@ -130,7 +133,11 @@ function App() {
           <Route path="/secretModBackend">
             <CommentModeration />
           </Route>
+          <Route>
+            <NotFound/>
+          </Route>
         </Switch>
+        <Footer/>
       </Router>
     );
   } else {
@@ -149,6 +156,7 @@ function App() {
       </Router>
     );
   }
+
 }
 
 

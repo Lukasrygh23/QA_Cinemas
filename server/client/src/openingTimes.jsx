@@ -45,6 +45,7 @@ const openingTimes = () => {
                 </table>
                 <br></br>
                 <h1>Holiday Hours</h1>
+                <p className='text-light'>Peak hours during the holidays can get very busy, so we recommend booking on our website as soon as possible!</p>
                 <table class="table table-dark table-striped table-hover">
                     <thead>
                         <tr>

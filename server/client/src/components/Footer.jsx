@@ -1,5 +1,7 @@
 import React from "react";
 import "../css/Footer.css";
+import { Link } from 'react-router-dom';
+
 const Footer = () => {
     return (
         <div className="footer-main">
@@ -9,27 +11,30 @@ const Footer = () => {
                     <div className="col">
                         <h4> </h4>
                         <ul className="list-plain">
-                            <li>0845 757 388</li>
-                            <li>Manchester, United Kingdom</li>
-                            <li> 8, St James' Bldg, 61-95 Oxford St, M1 6FQ</li>
+                            <a href="tel:0845 757 388">0845 757 388</a>
+                            <p>8th Floor, St James Bldg<br></br>
+                                61 - 65 Oxford Street<br></br>
+                                Manchester<br></br>
+                                M1 6FQ</p>
                         </ul>
                     </div>
                     {/* column2 */}
-                     <div className="col">
+                    <div className="col">
                         <h4> </h4>
                         <ul className="list-plain">
-                            <li> <a href="http://localhost:3000/HowToGetHere">Getting Here</a></li>
-                            <li><a href="http://localhost:3000/LocalVenues">Local Venues</a></li>
-                            <li><a href="http://localhost:3000/About">About Us</a></li>
+                            <li><Link to="/">Home</Link></li>
+                            <li><Link to="/HowToGetHere">Getting Here</Link></li>
+                            <li><Link to="/LocalVenues">Local Venues</Link></li>
+                            <li><Link to="/About">About Us</Link></li>
                         </ul>
                     </div>
                     {/* column3 */}
-                     <div className="col">
+                    <div className="col">
                         <h4> </h4>
                         <ul className="list-plain">
-                            <li><a href="http://localhost:3000/FilmClassification">Film Classification</a></li>
-                            <li><a href="http://localhost:3000/Discussion">Discussion Board</a></li>
-                            <li><a href="http://localhost:3000/Contact">Contact Us</a></li>
+                            <li><Link to="/FilmClassification">Film Classification</Link></li>
+                            <li><Link to="/Discussion">Discussion Board</Link></li>
+                            <li><Link to="/Contact">Contact Us</Link></li>
                         </ul>
                     </div>
                 </div>
@@ -38,7 +43,6 @@ const Footer = () => {
                         &copy;{"2021"} Team Mystic | All rights reserved
                     </p>
                 </div>
-
             </div>
         </div>
     )
