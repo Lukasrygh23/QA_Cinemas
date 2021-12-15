@@ -44,7 +44,7 @@ describe('Testing the movie Route', () => {
         });
     });
 
-    //test CREATE
+    
 
     it('GET ALL test', (done) => {
         //Act
@@ -71,6 +71,11 @@ describe('Testing the movie Route', () => {
                     expect(movie.criticRating).to.be.a("number");
                     expect(movie.director).to.be.a("string");
                     expect(movie.cast).to.be.a("array");
+                    expect(movie.synopsis).to.be.a("string");
+                    expect(movie.newRelease).to.be.a("boolean");
+                    expect(movie.screenings).to.be.a("array");
+
+                    //Some are ommitted here, because not everyone has them.
                 });
                 done();
         })
@@ -90,6 +95,41 @@ describe('Testing the movie Route', () => {
                 expect(res).to.have.status(204);
                 done();
             });
+    })
+
+    it('Get By ID Test', (done) => {
+        //Act
+        chai.request(app)
+            .get("/movieRoutes/getById/1")
+            .end((err, res) => {
+                if (err) {
+                    done(err);
+                }
+                expect(err).to.be.null;
+                expect(res).to.have.status(200);
+                expect(res).to.not.be.null;
+                const body = res.body;
+                
+                body.map((movie) => {
+                    expect(movie).to.be.a("object");
+                    expect(movie).to.contain.keys("_id", "movieTitle", "id", "runTime", "BBFCRating", "criticRating", "director", "cast", "synopsis", "imageURL", "newRelease", "__v", "releaseDate");
+
+                    expect(movie.id).to.be.a("number");
+                    expect(movie.movieTitle).to.be.a("string");
+                    expect(movie.runTime).to.be.a("number");
+                    expect(movie.BBFCRating).to.be.a("string");
+                    expect(movie.director).to.be.a("string");
+                    expect(movie.cast).to.be.a("array");
+                    expect(movie.synopsis).to.be.a("string");
+                    expect(movie.imageURL).to.be.a("string");
+                    expect(movie.newRelease).to.be.a("boolean");
+                    expect(movie.screenings).to.be.a("array");
+                    expect(movie.releaseDate).to.be.a("string");
+
+                })
+                done();
+
+            })
     })
 
     it('Create Test', (done) => {
