@@ -88,7 +88,7 @@ const aboutPage = () => {
                     </div>
                 </div>
                 <h1 className="mt-5 mb-5">Scrum Description</h1>
-                <h3>What is Scrum?</h3>
+                <h3 className="text-warning">What is Scrum?</h3>
                 <p className="text-light">Scrum is a framework that helps teams create and deliver products while solving any complex problems they come across.
                     All the work is done in time - limited events (ranging between one week to one month). There will be as many sprints as required until the
                     requirements meet the MVP (Minimum Viable Product - where the product's features are met well enough for its customers).  Before starting each
@@ -96,7 +96,7 @@ const aboutPage = () => {
                     backlog', all of which should be completed by the end of the sprint. All the tasks are prioritised using the MoSCoW methodology (Must have, Should
                     have, Could have and Won't have). Click <a href="https://www.scrum.org/resources/what-is-scrum" className="text-primary" target="_blank">here</a> to learn more about Scrum.
                 </p>
-                <h3>How we used Scrum</h3>
+                <h3 className="text-warning">How we used Scrum</h3>
                 <p className="text-light">(Refer to the tabs above for everyone's roles). We planned for two sprints, with each one lasting 5 days (Monday to Friday).
                     The expected result by the end of our first sprint was to fulfil all the requirements for MVP (i.e. functionality, features etc) and the second sprint
                     is expected to be for testing and refining the website further (e.g. fixing the formatting, considering adding on non - MVP features etc). Once the product
