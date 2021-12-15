@@ -157,13 +157,27 @@ describe("Thread Routes", () => {
   //       //    expect(Comment).to.be.a("object");
   //       //  })
 
-
   //       // expect(body).to.be.a("object");
   //       // expect(body).to.contain.key("username");
   //       // expect(body).to.contain.key("text")
   //       done();
   //     });
   // });
+
+  it("Delete Comment by ID", (done) => {
+    chai
+      .request(app)
+      .delete(`/threadRoutes/deleteComment/${testComment._id}`)
+      .end((err, res) => {
+        if (err) {
+          done(err);
+        }
+        expect(err).to.be.null;
+        expect(res).to.not.be.undefined;
+        expect(res).to.have.status(204);
+        done();
+      });
+  });
 
   after((done) => {
     console.log("Thread Tests done");
