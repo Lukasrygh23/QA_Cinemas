@@ -39,6 +39,22 @@ describe("Booking Routes", () => {
       });
   });
 
+  it('Booking but badly test', (done) => {
+    chai
+      .request(app)
+      .post("/bookingRoutes/create")
+      .send({
+        adult:"This shouldn't be a string"
+      })
+      .end((err, res) => {
+        if (err) {
+          done(err);
+        }
+        expect(res).to.have.status(500)
+        done();
+    })
+  })
+
   it("Get All Bookings Test", (done) => {
     chai
       .request(app)
@@ -65,12 +81,8 @@ describe("Booking Routes", () => {
           expect(Booking.movieTitle).to.be.a("string");
           expect(Booking.adult).to.be.a("number");
           expect(Booking.child).to.be.a("number");
-          //   expect(Booking).to.contain.keys("date");
-          //   expect(Booking.date).to.be.a("string");
           expect(Booking).to.contain.keys("time");
           expect(Booking.time).to.be.a("String");
-          //   expect(Booking).to.contain.keys("concessions");
-          //   expect(Booking.concessions).to.be.a("boolean");
           expect(Booking).to.contain.keys("price");
           expect(Booking.price).to.be.a("number");
         });

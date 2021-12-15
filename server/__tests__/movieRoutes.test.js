@@ -11,7 +11,7 @@ const app = require('../index');
 describe('Testing the movie Route', () => {
 
     //Test Objects
-    const createMovie = new Movie({
+    const deleteMovie = new Movie({
         movieTitle: "How to Test",
         id: 20,
         runTime: 250,
@@ -20,7 +20,7 @@ describe('Testing the movie Route', () => {
         director: "Derp",
         cast: ["herp", "derp"],
         synopsis: "Don't ask me",
-        imageUrl: "Lol",
+        imageURL: "Lol",
         newRelease: false
     });
 
@@ -33,12 +33,29 @@ describe('Testing the movie Route', () => {
         director: "Derp",
         cast: ["herp", "derp"],
         synopsis: "Don't ask me",
-        imageUrl: "Lol",
+        imageURL: "Lol",
         newRelease: false
     });
 
+    const getOneMovie = new Movie({
+        movieTitle: "TestTestTest",
+        id: 22,
+        runTime: 10,
+        BBFCRating: "R18",
+        criticRating: 10,
+        director: "He who for legal reasons must not be named",
+        cast: ["One", "Two"],
+        synopsis: "A thing happens. The end.",
+        imageURL: "show's over, folks!",
+        newRelease:false
+    })
+
     before((done) => {
-        chai.request(app).post("/movieRoutes/create").send(createMovie).end(() => {
+        chai.request(app).post("/movieRoutes/create").send(getOneMovie).end(() => {
+            console.log("Creating movie for GetById...");
+        });
+        chai.request(app).post("/movieRoutes/create").send(deleteMovie).end(() => {
+            console.log("Creating movie to be deleted...")
             done();
         });
     });
@@ -99,7 +116,7 @@ describe('Testing the movie Route', () => {
     it('Get By ID Test', (done) => {
         //Act
         chai.request(app)
-            .get("/movieRoutes/getById/1")
+            .get("/movieRoutes/getById/22")
             .end((err, res) => {
                 if (err) {
                     done(err);
@@ -111,42 +128,47 @@ describe('Testing the movie Route', () => {
                 
                 body.map((movie) => {
                     expect(movie).to.be.a("object");
-                    expect(movie).to.contain.keys("_id", "movieTitle", "id", "runTime", "BBFCRating", "criticRating", "director", "cast", "synopsis", "imageURL", "newRelease", "__v", "releaseDate");
-
+                    
+                    expect(movie).to.contain.key("id");
                     expect(movie.id).to.be.a("number");
-                    expect(movie.id).to.equal(1);
+                    expect(movie.id).to.equal(22);
 
+                    expect(movie).to.contain.key("movieTitle");
                     expect(movie.movieTitle).to.be.a("string");
-                    expect(movie.movieTitle).to.equal("No Time To Die");
+                    expect(movie.movieTitle).to.equal("TestTestTest");
 
+                    expect(movie).to.contain.key("runTime");
                     expect(movie.runTime).to.be.a("number");
-                    expect(movie.runTime).to.equal(163);
+                    expect(movie.runTime).to.equal(10);
 
+                    expect(movie).to.contain.key("BBFCRating");
                     expect(movie.BBFCRating).to.be.a("string");
-                    expect(movie.BBFCRating).to.equal("12A");
+                    expect(movie.BBFCRating).to.equal("R18");
 
+                    expect(movie).to.contain.key("criticRating");
+                    expect(movie.criticRating).to.be.a("number");
+                    expect(movie.criticRating).to.equal(10);
+
+                    expect(movie).to.contain.key("director")
                     expect(movie.director).to.be.a("string");
-                    expect(movie.director).to.equal("Cary Joji Fukunaga");
+                    expect(movie.director).to.equal("He who for legal reasons must not be named");
 
+                    expect(movie).to.contain.key("cast");
                     expect(movie.cast).to.be.a("array");
-                    expect(movie.cast[0]).to.equal("Daniel Craig");
-                    expect(movie.cast[8]).to.equal("Ralph Fiennes");
-                    //not testing the entire array, but the first and last values.
-
+                    expect(movie.cast[0]).to.equal("One");
+                    expect(movie.cast[1]).to.equal("Two");
+                    
+                    expect(movie).to.contain.key("synopsis");
                     expect(movie.synopsis).to.be.a("string");
-                    expect(movie.synopsis).to.equal("In this film, Bond, who has left active service with MI6, is recruited by the CIA to find a kidnapped scientist, which leads to a showdown with a powerful adversary. ")
+                    expect(movie.synopsis).to.equal("A thing happens. The end.")
 
+                    expect(movie).to.contain.key("imageURL");
                     expect(movie.imageURL).to.be.a("string");
-                    expect(movie.imageURL).to.equal("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.filmstories.co.uk%2Fwp-content%2Fuploads%2F2020%2F02%2Fno-time-to-die-poster-2.jpg");
+                    expect(movie.imageURL).to.equal("show's over, folks!");
 
+                    expect(movie).to.contain.key("newRelease");
                     expect(movie.newRelease).to.be.a("boolean");
                     expect(movie.newRelease).to.be.false;
-
-                    expect(movie.screenings).to.be.a("array");
-                    //This is empty.
-
-                    expect(movie.releaseDate).to.be.a("string");
-
 
                 })
                 done();
@@ -172,15 +194,38 @@ describe('Testing the movie Route', () => {
         })
     })
 
+    it('Test Create Error', (done) => {
+
+        chai.request(app)
+            .post("/movieRoutes/create")
+            .send({
+                id:"This isn't allowed to be an ID"
+            })
+            .end((err, res) => {
+                if (err) {
+                    console.log(err)
+                    done(err);
+                }
+
+                //console.log(res);
+                expect(res).to.have.status(500);
+                done();
+            })
+        })
+
 
     after((done) => {
         chai.request(app).delete("http://localhost:5000/movieRoutes/deleteById/20").end(() => {
-            console.log("Delete request for movie ID 20.");
+            console.log("Delete request for movie ID 20 - if it hasn't been deleted already.");
         })
         chai.request(app).delete("/movieRoutes/deleteById/21").end(() => {
-            console.log("Delete request for movie ID 21.");
-            done();
+            console.log("Delete request for movie ID 21, which we created.");
+            
         })
+        chai.request(app).delete("/movieRoutes/deleteById/22").end(() => {
+            console.log("Delete request for movie ID 22, which we used to test GetById.");
+            done();
+        });
 
 
     });
