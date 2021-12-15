@@ -5,12 +5,16 @@ import useVideos from './hooks/useVideos';
 import FilmCard from '../src/components/FilmCard'
 
 const TheLastDuelPage = () => {
-    const bookingFormURLParam = 'the_last_duel'
     const [selectedVideo, setSelectedVideo] = useState(null);
     const [videos, search] = useVideos('The Last Duel Trailer');
     const [data, setData] = useState([])
     const [loading, setLoading] = useState(true)
     const [videoLoading, setVideoLoading] = useState(true)
+    const bookingFormURLParam = 'the_last_duel'
+    const screen = "Standard Screen"
+    const showtime1 = "06:00 AM"
+    const showtime2 = "09:00 AM"
+    const showtime3 = "12:00 PM"
 
     const getData = async () => {
         const res = await axios.get(`http://localhost:5000/movieRoutes/getById/4`)
@@ -33,7 +37,7 @@ const TheLastDuelPage = () => {
     return (
         <div>
             <VideoDetail video={selectedVideo} />
-            <FilmCard data={data} bookingFormURLParam={bookingFormURLParam} />
+            <FilmCard data={data} bookingFormURLParam={bookingFormURLParam} screen={screen} showtime1={showtime1} showtime2={showtime2} showtime3={showtime3} />
         </div>
     );
     }

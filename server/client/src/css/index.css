@@ -52,10 +52,3 @@ a:link {
     0.125rem 0.125rem 1rem rgba(255, 154, 90, 0.5);
 }
 
-.director, .cast, .runtime {
-  margin-top: -20px;
-}
-
-.center-film-booking {
-  margin-left: 300px;
-}

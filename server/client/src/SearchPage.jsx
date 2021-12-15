@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import './css/searchPage.css'
 
 const SearchPage = (props) => {
     const dataArray = props.data
@@ -6,11 +7,16 @@ const SearchPage = (props) => {
 
         return (
             <React.Fragment>
-                <h3 className="text-warning mt-4 mb-5">Your Search Results</h3>
-                {/* <p className="text-light">{filteredDataArray.length}</p> */}
+                <a id="home-tag" className="ms-3" href="http://localhost:3000/">Home</a>
+                <h3 className="text-warning mt-2 mb-3 ms-3">Search</h3>
+                <form class="d-flex" onSubmit={props.handleSubmit}>
+                    <input class="ms-3 search-bar" type="search" value={props.userInput} onChange={props.handleUserInput} aria-label="Search" />
+                    <button class="btn btn-primary" type="submit">Search</button>
+                </form>
+                <p className="text-light fw-bold border-bottom border-info-3 mt-3 ms-5">{filteredDataArray.length} results</p>
                 {filteredDataArray.map((val) => (
                     <div className="border-bottom border-info-3 mt-3 ms-5 me-5" key={val.title}>
-                        <a className="text-primary" href={val.link}>{val.title}</a>
+                        <a className="link-tags" href={val.link}>{val.title}</a>
                         <p className="text-light">{val.description}</p>
                     </div>
                 ))

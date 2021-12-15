@@ -138,7 +138,13 @@ function App() {
       <Router>
         <ScrollToTop />
         <Switch>
-          <SearchPage searchTerm={searchTerm} data={data} />
+          <SearchPage
+            searchTerm={searchTerm}
+            data={data}
+            handleUserInput={handleUserInput}
+            userInput={userInput}
+            handleSubmit={handleSubmit}
+          />
         </Switch>
       </Router>
     );
