@@ -9,7 +9,7 @@ const app = require("../index");
 const date = Date.parse("2021-12-19T00:00:00.000Z");
 
 const testBooking = new Booking({
-  bookingName: "Alfred",
+  bookingName: "Testing",
   movieTitle: "No Time To Die",
   adult: 1,
   child: 1,
@@ -53,13 +53,17 @@ describe("Booking Routes", () => {
 
         body.map((Booking) => {
           expect(Booking).to.be.a("Object");
-          expect(Booking).to.contain.keys("bookingName");
+          expect(Booking).to.contain.keys(
+            "bookingName",
+            "movieTitle",
+            "adult",
+            "child",
+            "time",
+            "price"
+          );
           expect(Booking.bookingName).to.be.a("string");
-          expect(Booking).to.contain.keys("movieTitle");
           expect(Booking.movieTitle).to.be.a("string");
-          expect(Booking).to.contain.keys("adult");
           expect(Booking.adult).to.be.a("number");
-          expect(Booking).to.contain.keys("child");
           expect(Booking.child).to.be.a("number");
           //   expect(Booking).to.contain.keys("date");
           //   expect(Booking.date).to.be.a("string");
@@ -72,5 +76,12 @@ describe("Booking Routes", () => {
         });
         done();
       });
+  });
+
+  after((done) => {
+    console.log("booking tests done");
+    Booking.deleteOne({ bookingName: "Testing" }).then(() => {
+      done();
+    });
   });
 });
