@@ -115,16 +115,39 @@ describe('Testing the movie Route', () => {
                     expect(movie).to.contain.keys("_id", "movieTitle", "id", "runTime", "BBFCRating", "criticRating", "director", "cast", "synopsis", "imageURL", "newRelease", "__v", "releaseDate");
 
                     expect(movie.id).to.be.a("number");
+                    expect(movie.id).to.equal(1);
+
                     expect(movie.movieTitle).to.be.a("string");
+                    expect(movie.movieTitle).to.equal("No Time To Die");
+
                     expect(movie.runTime).to.be.a("number");
+                    expect(movie.runTime).to.equal(163);
+
                     expect(movie.BBFCRating).to.be.a("string");
+                    expect(movie.BBFCRating).to.equal("12A");
+
                     expect(movie.director).to.be.a("string");
+                    expect(movie.director).to.equal("Cary Joji Fukunaga");
+
                     expect(movie.cast).to.be.a("array");
+                    expect(movie.cast[0]).to.equal("Daniel Craig");
+                    expect(movie.cast[8]).to.equal("Ralph Fiennes");
+                    //not testing the entire array, but the first and last values.
+
                     expect(movie.synopsis).to.be.a("string");
+                    expect(movie.synopsis).to.equal("In this film, Bond, who has left active service with MI6, is recruited by the CIA to find a kidnapped scientist, which leads to a showdown with a powerful adversary. ")
+
                     expect(movie.imageURL).to.be.a("string");
+                    expect(movie.imageURL).to.equal("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.filmstories.co.uk%2Fwp-content%2Fuploads%2F2020%2F02%2Fno-time-to-die-poster-2.jpg");
+
                     expect(movie.newRelease).to.be.a("boolean");
+                    expect(movie.newRelease).to.be.false;
+
                     expect(movie.screenings).to.be.a("array");
+                    //This is empty.
+
                     expect(movie.releaseDate).to.be.a("string");
+
 
                 })
                 done();
