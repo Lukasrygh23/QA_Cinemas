@@ -5,8 +5,8 @@ const error = require;
 
 router.post("/create", (req, res, next) => {
   const movie = new Movie(req.body);
-  console.log(req.body);
-  console.log(movie);
+  //console.log(req.body);
+  //console.log(movie);
 
   movie
     .save()
@@ -43,12 +43,12 @@ router.get("/getById/:id", (req, res, next) => {
 
 router.delete("/deleteById/:id", (req, res, next) => {
   const id = req.params.id;
-  console.log(req.params.id);
+  //console.log(req.params.id);
   Movie.deleteOne({ id: id }, (error, result) => {
     if (error) {
       next(error);
     } else {
-      res.status(204).send(result);
+      res.status(204).send(`movie with id ${id} deleted.`);
     }
   })
 })
