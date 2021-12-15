@@ -7,7 +7,7 @@
     "server": "nodemon index.js",
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "test": "mocha __tests__",
+    "test": "mocha __tests__ --exit",
     "coverage": "nyc npm test"
   },
   "author": "Daniel Li, Gabriel Jose, Lukas Rygh, Samuel Sheldon and Solomon Boundy",
