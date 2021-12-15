@@ -14,7 +14,6 @@ const Comment = model("Comment", commentSchema);
 
 const threadSchema = new Schema(
   {
-    id: { type: Number, unique: true },
     userName: String,
     subject: String,
     rating: { type: Number, min: 0, max: 10 },

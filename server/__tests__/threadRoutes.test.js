@@ -5,7 +5,7 @@ const { Thread } = require("../persistence/thread.js");
 
 chai.use(chaiHttp);
 
-const app = require("../index.js");
+const app = require("../index");
 
 const testThread = new Thread({
   userName: "testman",
@@ -20,7 +20,9 @@ const testThread = new Thread({
 //   text: "wow a test comment",
 // });
 
+
 describe("Thread Routes", () => {
+  
   it("Create Thread Test", (done) => {
     chai
       .request(app)
@@ -40,6 +42,7 @@ describe("Thread Routes", () => {
       });
   });
 
+
   it("Get All Thread Test", (done) => {
     chai
       .request(app)
@@ -54,19 +57,20 @@ describe("Thread Routes", () => {
 
         body.map((Thread) => {
           expect(Thread).to.be.a("Object");
-          expect(Thread).to.contain.keys(
-            "__v",
-            "_id",
-            "userName",
-            "subject",
-            "reviewBody",
-            "comments"
-          );
+
+          expect(Thread).to.contain.key("_id");
+          expect(Thread).to.contain.key("userName");
+          expect(Thread).to.contain.key("subject");
+          expect(Thread).to.contain.key("reviewBody")
+          expect(Thread).to.contain.key("comments");
+          
           expect(Thread.userName).to.be.a("string");
           expect(Thread.subject).to.be.a("string");
           expect(Thread.reviewBody).to.be.a("string");
           expect(Thread.comments).to.be.a("array");
+
         });
+        done();
       });
   });
 
