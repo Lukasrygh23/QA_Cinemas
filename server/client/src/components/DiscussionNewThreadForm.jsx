@@ -2,7 +2,7 @@ import "../css/discussionCard.css";
 const DiscussionNewThreadForm = (props) => {
   return (
     <div className="container">
-      <div class="row">
+      <div className="row">
         <h5 className="text-light">Post a new thread!</h5>
         <form
           onSubmit={props.newThread}
@@ -68,7 +68,7 @@ const DiscussionNewThreadForm = (props) => {
           </div>
           <div>
             <p></p>
-            <button class="button-62">Post Thread</button>
+            <button className="button-62">Post Thread</button>
           </div>
         </form>
       </div>

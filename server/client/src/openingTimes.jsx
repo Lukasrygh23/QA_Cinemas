@@ -3,9 +3,9 @@ import './css/openingTimes.css';
 const openingTimes = () => {
     return (
         <>
-            <div class="container w-50 mx-auto">
+            <div className="container w-50 mx-auto">
                 <h1>Opening Times</h1>
-                <table class="table table-dark table-striped table-hover">
+                <table className="table table-dark table-striped table-hover">
                     <thead>
                         <tr>
                             <th>Day</th>
@@ -46,7 +46,7 @@ const openingTimes = () => {
                 <br></br>
                 <h1>Holiday Hours</h1>
                 <p className='text-light'>Peak hours during the holidays can get very busy, so we recommend booking on our website as soon as possible!</p>
-                <table class="table table-dark table-striped table-hover">
+                <table className="table table-dark table-striped table-hover">
                     <thead>
                         <tr>
                             <td>Holidays</td>

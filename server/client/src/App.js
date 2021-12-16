@@ -29,7 +29,7 @@ import TheBatmanPage from './TheBatmanPage';
 import BookingTheBatmanPage from './BookingTheBatman';
 import CommentModeration from "./CommentModeration";
 import ScrollToTop from './components/ScrollToTop';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import SearchPage from './SearchPage';
 import data from './json/KeywordsSearch.json'
 

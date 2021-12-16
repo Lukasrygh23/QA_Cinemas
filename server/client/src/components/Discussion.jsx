@@ -118,7 +118,6 @@ const Discussion = () => {
           //use the setData to update the empty array
           setData(response.data);
           //the do something is to log the response to the console
-          // console.log(response.data.data);
           //in case things don't go according to plan, need too catch the error and deal with it
         })
         .catch((error) => {
@@ -143,7 +142,7 @@ const Discussion = () => {
     return (
       //<> -> a fragment, can use <div> instead
       <>
-        <h1 class="upcomingTitle ms-5">Ratings and Discussions</h1>
+        <h1 className="upcomingTitle ms-5">Ratings and Discussions</h1>
         {
           //to display the data on the page, we need to map over it
           data.map((Thread) => (

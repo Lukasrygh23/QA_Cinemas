@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import './css/searchPage.css'
 
 const SearchPage = (props) => {
@@ -9,9 +9,9 @@ const SearchPage = (props) => {
             <React.Fragment>
                 <a id="home-tag" className="ms-3" href="http://localhost:3000/">Home</a>
                 <h3 className="text-warning mt-2 mb-3 ms-3">Search</h3>
-                <form class="d-flex" onSubmit={props.handleSubmit}>
-                    <input class="ms-3 search-bar" type="search" value={props.userInput} onChange={props.handleUserInput} aria-label="Search" />
-                    <button class="btn btn-primary" type="submit">Search</button>
+                <form className="d-flex" onSubmit={props.handleSubmit}>
+                    <input className="ms-3 search-bar" type="search" value={props.userInput} onChange={props.handleUserInput} aria-label="Search" />
+                    <button className="btn btn-primary" type="submit">Search</button>
                 </form>
                 <p className="text-light fw-bold border-bottom border-info-3 mt-3 ms-5">{filteredDataArray.length} results</p>
                 {filteredDataArray.map((val) => (
