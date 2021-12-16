@@ -59,13 +59,12 @@ The unit test files test whether each 'unit' i.e. method of the application is f
 
 Unit tests have been written to cover the following file types:
 
-1. Components
-2. Routes
+1. Routes
 
 ## Built With
 
 Create-React-App
-NodeJS
+Node JS
 
 ## Authors
 
