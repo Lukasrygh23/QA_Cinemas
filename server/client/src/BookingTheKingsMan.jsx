@@ -110,7 +110,7 @@ const BookingTheKingsManPage = () => {
             {!paymentReady && (
                 <BookingForm movie={movie} noOfAdultsHandler={noOfAdultsHandler} price={price} noOfChildrenHandler={noOfChildrenHandler} concessionsHandler={concessionsHandler} handleSubmit={handleSubmit} dateHandler={dateHandler} timeHandler={timeHandler} bookingNameHandler={bookingNameHandler} time1={time1} time2={time2} time3={time3} certificate={certificate} startDate={startDate} endDate={endDate}/>)}
             {paymentReady && !paymentConfirmed && (
-                <div>
+                <div className="booking-container">
                     <h5 className="text-light mt-5 ms-5">Booking received!</h5>
                     <p className="text-light mt-3 ms-5">Please complete your booking by clicking on the below payment option</p>
                     <StripeCheckout className="ms-5 button-62"
@@ -123,7 +123,7 @@ const BookingTheKingsManPage = () => {
                 </div>
             )}
             {paymentConfirmed && (
-                <div>
+                <div className="booking-container">
                     <h5 className="text-light mt-5 ms-5">Booking Complete!</h5>
                     <p className="text-light mt-3 ms-5">Congratulations {bookingName}, you're off to watch <span className="text-warning"> {movie}</span> on {date} at {time}!</p>
                     <p className="text-light ms-5 mt-5">You will automatically be redirected to the home page in 10 seconds.</p>
