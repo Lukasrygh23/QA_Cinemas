@@ -1,11 +1,12 @@
 import { Link } from 'react-router-dom';
 import Logo from '../resources/QA Cinemas.png';
+import '../css/navbar.css'
 
 const navbar = (props) => {
     return (
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="http://www.staggeringbeauty.com/" target="_blank"><img id="logo" src={Logo} alt="todo clapping gif" width="200" height="200"></img></a>
+            <div id="nav-container" class="container-fluid">
+                <a class="navbar-brand" href="http://localhost:3000/" target="_blank"><img id="logo" src={Logo} alt="todo clapping gif" width="200" height="200"></img></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
