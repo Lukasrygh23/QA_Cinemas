@@ -1,0 +1,8 @@
+#bookingLink {
+  color: rgb(13, 77, 255);
+}
+
+.booking-container {
+  position: relative;
+  min-height: 48vh;
+}

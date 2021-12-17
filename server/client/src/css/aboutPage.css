@@ -1,0 +1,8 @@
+h1 {
+    color: #ff9a5a;
+    text-align: start;
+}
+
+#link:hover {
+    color: red;
+}

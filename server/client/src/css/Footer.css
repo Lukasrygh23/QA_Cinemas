@@ -1,0 +1,10 @@
+.footer-main {
+    color: rgba(255, 255, 255, 0.596);
+    background-color: #040303;
+    padding-top: 3em
+}
+
+a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.596);
+}

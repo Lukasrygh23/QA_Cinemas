@@ -1,0 +1,16 @@
+table, th, td {
+    text-align: center;
+    border: 1px solid white;
+    table-layout: fixed;
+}
+
+h1 {
+    color: #ff9a5a;
+    transition: color 1s;
+    text-align: center;
+}
+
+td {
+    width: 0.1%;
+    white-space: nowrap;
+}

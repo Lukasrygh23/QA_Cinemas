@@ -1,0 +1,8 @@
+#sendBtn, #clearBtn {
+    background: linear-gradient(to bottom right, #ef4765, #ff9a5a);
+    color: #ffffff;
+}
+
+#clearBtn {
+    margin-left: 10px;
+}

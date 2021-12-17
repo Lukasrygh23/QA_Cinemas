@@ -1,0 +1,47 @@
+.bbfcImg {
+    width: 50rem;
+    height: 45rem;
+    margin-bottom: 10px;
+    margin-left: 30%;
+    justify-content: center;
+}
+
+#filmClassTitle {
+    color: #ff9a5a;
+    -webkit-transition: color 1s;
+    -moz-transition: color 1s;
+    -ms-transition: color 1s;
+    -o-transition: color 1s;
+    transition: color 1s;
+}
+
+#filmClassTitle:hover {
+    color: #cc5b15;
+}
+
+
+@keyframes moveContent {
+    0% {
+        transform: translateY(40rem);
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+#row1 {
+    animation: moveContent 1s .3s forwards;
+    opacity: 0;
+}
+
+#row2 {
+    animation: moveContent 1s .5s forwards;
+    opacity: 0;
+}
+
+#row3 {
+    animation: moveContent 1s .7s forwards;
+    opacity: 0;
+}
