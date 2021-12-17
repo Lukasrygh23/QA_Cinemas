@@ -30,7 +30,7 @@ const DicussionCardGenerator = (props) => {
               <div id="comment-section">
                 {Thread.comments.map((comment) => (
                   <div className="container">
-                    <div class="col-md-20">
+                    <div className="col-md-20">
                       <h6 id="commentUName">
                         <b>Username:</b> {comment.username}
                       </h6>

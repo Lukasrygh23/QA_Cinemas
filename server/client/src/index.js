@@ -16,4 +16,3 @@ ReactDOM.render(
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
 
-console.log('Strike publishable key is', process.env.REACT_APP_STRIPE_KEY);

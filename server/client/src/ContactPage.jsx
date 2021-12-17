@@ -45,14 +45,14 @@ const ContactPage = () => {
 
     return (
         <>
-            <div class="container">
-                <h1 className="text-start mt-5 mb-5">Contact Us</h1>
+            <div className="container">
+                <h1 classNameName="text-start mt-5 mb-5">Contact Us</h1>
                 <p className="text-light">Our customer services are open daily from 9am to 8pm.
                     <br></br>Call us at:<br></br>
                     <a href="tel:0845 757 388">0845 757 388</a>
                 </p>
                 <p className="text-light">Alternatively, you can send us an email below to our site owner.</p>
-                <form class="was-validated">
+                <form className="was-validated">
                     <fieldset>
                         <label className="text-light" for="customerName">Enter your name:</label>
                         <br></br>
@@ -66,15 +66,15 @@ const ContactPage = () => {
                         <br></br>
                         <label className="text-light">Subject</label>
                         <br></br>
-                        <input type="text" class="form-control w-50" id="subjectEmail" placeholder="Enter subject here" value={subject} onChange={e => setSubject(e.target.value)} required></input>
+                        <input type="text" className="form-control w-50" id="subjectEmail" placeholder="Enter subject here" value={subject} onChange={e => setSubject(e.target.value)} required></input>
                         <br></br>
                         <br></br>
                         <label className="text-light" for="emailMessage">Message</label>
                         <br></br>
-                        <textarea class="form-control is-invalid w-50" id="emailMessage" placeholder="Enter message here" rows="10" cols="50" value={message} onChange={e => setMessage(e.target.value)} required></textarea>
+                        <textarea className="form-control is-invalid w-50" id="emailMessage" placeholder="Enter message here" rows="10" cols="50" value={message} onChange={e => setMessage(e.target.value)} required></textarea>
                         <br></br>
-                        <button class="btn btn-sm" type="submit" value="Send" id="sendBtn" onClick={submit}>Send</button>
-                        <button class="btn btn-sm" type="reset" value="Reset" id="clearBtn">Clear</button>
+                        <button className="btn btn-sm" type="submit" value="Send" id="sendBtn" onClick={submit}>Send</button>
+                        <button className="btn btn-sm" type="reset" value="Reset" id="clearBtn">Clear</button>
                     </fieldset>
                 </form>
                 <div className="text-light">

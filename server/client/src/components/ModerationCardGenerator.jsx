@@ -1,5 +1,5 @@
-import { useState, useEffect } from "react-dom";
 import "../css/Card.css";
+
 const ModerationCardGenerator = (props) => {
     const { Thread } = props;
     console.log(Thread);

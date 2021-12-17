@@ -46,7 +46,7 @@ const CarouselGallery = () => {
     >
       <div className="divContainer">
         <img
-          style={{ "pointer-events": "all" }}
+          style={{ "pointerEvents": "all" }}
           onClick={movie1Handler}
           className="carouselImages"
           src="https://cdn.mos.cms.futurecdn.net/dNmCDjJT5G76aDKiYphTkF.jpg"
@@ -67,7 +67,7 @@ const CarouselGallery = () => {
       </div>
       <div className="divContainer">
         <img
-          style={{ "pointer-events": "all" }}
+          style={{ "pointerEvents": "all" }}
           onClick={movie2Handler}
           className="carouselImages"
           src="https://images5.alphacoders.com/117/thumb-1920-1174594.jpg"
@@ -88,7 +88,7 @@ const CarouselGallery = () => {
       </div>
       <div className="divContainer">
         <img
-          style={{ "pointer-events": "all" }}
+          style={{ "pointerEvents": "all" }}
           onClick={movie3Handler}
           className="carouselImages"
           src="https://images2.alphacoders.com/118/thumb-1920-1180551.jpg"
@@ -107,7 +107,7 @@ const CarouselGallery = () => {
       </div>
       <div className="divContainer">
         <img
-          style={{ "pointer-events": "all" }}
+          style={{ "pointerEvents": "all" }}
           onClick={movie4Handler}
           className="carouselImages"
           src="https://images8.alphacoders.com/117/thumb-1920-1176366.jpg"

@@ -1,10 +1,11 @@
 import "../css/discussionCard.css";
 const DiscussionForm = (props) => {
   const { Thread } = props;
+
   return (
-    <div class="container">
-      <div class="row  mt-5 mb-3">
-        <div class="col-sm-8">
+    <div className="container">
+      <div className="row mt-5 mb-3">
+        <div className="col-sm-8">
           <h5 className="text-light">Have your say!</h5>
           <form
             onSubmit={props.handleSubmit}
@@ -42,7 +43,7 @@ const DiscussionForm = (props) => {
             </div>
             <div>
               <p></p>
-              <button class="button-62"> Submit Comment</button>
+              <button className="button-62"> Submit Comment</button>
             </div>
           </form>
         </div>
